@@ -1,0 +1,91 @@
+1.0.0 - 2010-09-09 - Skyler Moore
+	Initial creation of ContactBuddy.
+1.0.1 - 2010-09-13 - Skyler Moore
+	Updated the way contactbuddy.css is called
+		Updated contactbuddy.php:
+			Added "wp_enqueue_style('contactbuddy_css', $this->_pluginURL . "/css/contactbuddy.css");
+			       wp_print_styles('contactbuddy_css');" lines 56-57.
+			Removed "$return .= '<link rel="stylesheet" href="'.$this->_pluginURL . '/css/contactbuddy.css" type="text/css" media="all" />';" line 166.
+1.0.2 - 2010-09-13 - Skyler Moore
+	Updated stylesheet to block default list-style for form.
+1.0.3 - 2010-09-13 - Skyler Moore
+	Fixed bug added in 1.0.1 printing styles incorrectly
+		Updated contactbuddy.php:
+			Removed "wp_print_styles('contactbuddy_css');" line 57.
+1.0.4 - 2010-09-14 - Skyler Moore
+	Readjusting css call and adding css tip.
+1.0.5 - 2010-09-14 - Skyler Moore
+	Adding to contactbuddy.css
+		Added "list-style: none !important;" to .contactbuddy-form ul, .contactbuddy-form ul li".
+1.0.6 - 2011-03-31 - Skyler Moore
+	Adding check if _recaptcha_qsencode() has already been declared.
+		_recaptchalib.php:
+			Added if (!function_exists()), if (!defined()), and if (!class_exists()) checks to prevent redeclaring errors.
+	Adding Optional contactbuddy default CSS.
+		admin.php added checkbox and validation.
+		contactbuddy.php added CSS optional.
+1.1.0 - 2011-06-09 - Skyler Moore
+	Adding new style options.
+		Added
+			contact-compressed.css
+			contact-dark.css
+			contact-fat.css
+			contact-fullwidth.css
+			contact-light.css
+			contact-skinny.css
+		Updated classes/admin.php:
+			Line 45 Removed:
+				if(isset($_POST[$this->_var . '-defaultcss']) && ($_POST[$this->_var . '-defaultcss'] == 'on')) {
+					$_POST[$this->_var . '-defaultcss'] = 'on';
+				} else {
+					$_POST[$this->_var . '-defaultcss'] = 'off';
+				}
+			Replaced
+				<td>
+					<label for="cb-defaultcss">Use default styles <a class="pluginbuddy_tip" title=" - [Default: enabled] - When enabled, default ContactBuddy stylesheet will be included on the front end.">(?)</a>:</label>
+				</td>
+				<?php
+					$checked = '';
+					if ($this->_options['defaultcss'] == 'on') { $checked = ' checked '; }
+					echo '<td><input type="checkbox" id="cb-defaultcss" name="' . $this->_var . '-defaultcss" ' . $checked . '/> Enabled</td>';
+				?>
+			With
+				<td>
+					<label for="cb-defaultcss">Style Options <a class="pluginbuddy_tip" title=" -  - Choose a from multiple styles for your contact form.">(?)</a>:</label>
+				</td>
+				<td>
+					<?php $cbstylelist = array(
+						'on'		=> 'default',
+						'light'		=> 'light',
+						'dark'		=> 'dark',
+						'skinny'	=> 'skinny',
+						'fat'		=> 'fat',
+						'full'		=> 'full width',
+						'compressed'	=> 'compressed',
+						'off'		=> 'no styles'
+					); ?>
+					<select name="<?php echo $this->_var; ?>-defaultcss" id="cb-defaultcss">
+					<?php
+						foreach( $cbstylelist as $stylekey => $styleval ) {
+							$select = '';
+							if ( isset( $this->_options['defaultcss'] ) ) {								
+								if ( $this->_options['defaultcss'] == $styleval) { $select = " selected "; }
+							}
+							echo '<option value="' . $stylekey . '"' . $select . '>' . $styleval . '</option>';
+						}
+					?>
+					</select>
+				</td>
+		Updated contactbuddy.php:
+			Line 142 Replaced:
+				wp_enqueue_style('contactbuddy_css', $this->_pluginURL . "/css/contactbuddy.css");
+			With:
+				if ( $this->_options['defaultcss'] == 'on' ) {
+					$stylesheet = 'contactbuddy';
+				} else {
+					$stylesheet = 'contact-' . $this->_options['defaultcss'];
+				}
+				wp_enqueue_style('contactbuddy_css', $this->_pluginURL . "/css/' . $stylesheet . '.css");
+			Added label tags to form.
+1.0.8 - 2011-06-10 - Skyler Moore
+	Added new style sheets

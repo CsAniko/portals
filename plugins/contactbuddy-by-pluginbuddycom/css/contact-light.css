@@ -1,0 +1,88 @@
+.contactbuddy-form {
+	padding: 10px;
+	text-align: left !important;
+}
+.contactbuddy-form table {
+	width: auto !important;
+}
+.contactbuddy-form ul {
+	overflow: hidden;
+	padding: 10px;
+	background: #DDDDDD;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#F6F6F6), color-stop(#DDDDDD, 10%), color-stop(#EEEEEE, 90%));
+	background: -webkit-linear-gradient(#EEEEEE, #DDDDDD 10%, #EEEEEE 90%, #F6F6F6 100%);
+	background: -moz-linear-gradient(#EEEEEE, #DDDDDD 10%, #EEEEEE 90%, #F6F6F6 100%);
+	background: -ms-linear-gradient(#EEEEEE, #DDDDDD 10%, #EEEEEE 90%, #F6F6F6 100%);
+	background: -o-linear-gradient(#EEEEEE, #DDDDDD 10%, #EEEEEE 90%, #F6F6F6 100%);
+	background: linear-gradient(#EEEEEE, #DDDDDD 10%, #EEEEEE 90%, #F6F6F6 100%);
+	-webkit-box-shadow: #888 0 0 4px;
+	-moz-box-shadow: #888 0 0 4px;
+	-o-box-shadow: #888 0 0 4px;
+	-khtml-box-shadow: #888 0 0 4px;
+	box-shadow: #888 0 0 4px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	margin: 0;
+}
+.contactbuddy-form ul,
+.contactbuddy-form ul li {
+	list-style-type: none !important;
+	list-style: none !important;
+}
+.contactbuddy-form ul li {
+	margin-left: 5px !important;
+}
+.contactbuddy-form ul li label {
+	color: #333333;
+	text-shadow: #FFFFFF 0px 1px 1px;
+}
+.contactbuddy-form ul li textarea,
+.contactbuddy-form ul li input {
+	background: #BBBBBB;
+	border: 1px solid #AAAAAA;
+	color: #888888;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.contactbuddy-form ul li textarea:focus,
+.contactbuddy-form ul li input:focus {
+	background: #FFFFFF;
+	border: 1px solid #888888;
+	color: #555555;
+	-webkit-box-shadow: inset #EEEEEE 0 0 3px;
+	-moz-box-shadow: inset #EEEEEE 0 0 3px;
+	-o-box-shadow: inset #EEEEEE 0 0 3px;
+	box-shadow: inset #EEEEEE 0 0 3px;
+}
+
+.contactbuddy-form ul li:before,
+.contactbuddy-form ul li:after {
+	content: none !important;
+}
+.contactbuddy-form ul li input.cbfit{
+	width: 98%;
+	max-width: 256px;
+}
+.contactbuddy-form ul li textarea.cbfit {
+	width: 100%;
+}
+
+.contactbuddy-form ul li textarea.cbfit {
+	font-family: inherit !important;
+}
+.cberror {
+/*
+	background: #FBE3E4;
+	border: 2px solid #FBC2C4;
+*/
+	color: #8A1F11;
+}
+p.cbstatus {
+	border: 2px solid #006600;
+	padding: 4px;
+	width: auto !important;
+}

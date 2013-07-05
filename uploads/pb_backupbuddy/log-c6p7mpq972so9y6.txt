@@ -1,0 +1,21 @@
+[Jun 26, 2013 15:13:04 0-error] [aruy9qmv14] Unknown backup mode.
+[Jun 26, 2013 15:13:04 0-error] [aruy9qmv14] Backup FAILED. Unknown backup type.
+[Jun 26, 2013 15:13:04 0-error] [aruy9qmv14] Error #9002b. Unable to create temporary storage directory ()
+---
+Fatal PHP error encountered:
+type => 1
+message => Call to undefined method pb_backupbuddy_backup::get_errors()
+file => /Volumes/Macintosh HD/Users/bill/Sites/wordpress/wp-content/plugins/backupbuddy/controllers/actions.php
+line => 132
+---
+[Jun 26, 2013 15:21:02 0-error] [4j8rcjgvp7] Unknown backup mode.
+[Jun 26, 2013 15:21:02 0-error] [4j8rcjgvp7] Backup FAILED. Unknown backup type.
+[Jun 26, 2013 15:21:02 0-error] [4j8rcjgvp7] Error #9002b. Unable to create temporary storage directory ()
+---
+Fatal PHP error encountered:
+type => 1
+message => Call to undefined method pb_backupbuddy_backup::get_errors()
+file => /Volumes/Macintosh HD/Users/bill/Sites/wordpress/wp-content/plugins/backupbuddy/controllers/actions.php
+line => 132
+---
+[Jun 26, 2013 16:04:03 0-error] [] Fileoptions file `/Volumes/Macintosh HD/Users/bill/Sites/wordpress/wp-content/uploads/pb_backupbuddy/fileoptions/k023quf3nc-filetree.txt` not found and NOT in create mode. Verify file exists & check permissions.

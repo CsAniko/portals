@@ -1,0 +1,38 @@
+.contactbuddy-form {
+	text-align: left !important;
+}
+.contactbuddy-form table {
+	width: auto !important;
+}
+.contactbuddy-form ul,
+.contactbuddy-form ul li {
+	list-style-type: none !important;
+	list-style: none !important;
+	background: transparent;
+}
+.contactbuddy-form ul li:before,
+.contactbuddy-form ul li:after {
+	content: none !important;
+}
+.contactbuddy-form ul li input.cbfit{
+	width: 98%;
+	max-width: 250px;
+}
+.contactbuddy-form ul li textarea.cbfit {
+	width: 100%;
+	max-width: 250px;
+}
+.contactbuddy-form ul li textarea.cbfit {
+	font-family: inherit !important;
+}
+.contactbuddy-form ul {
+	margin: 5px;
+}
+.cberror {
+	color: #8A1F11;
+}
+p.cbstatus {
+	border: 2px solid #006600;
+	padding: 4px;
+	width: auto !important;
+}

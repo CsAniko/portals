@@ -1,0 +1,1262 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnDash LMS v1.3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-06-14 21:11+0100\n"
+"Last-Translator: admin <info@ftfconsultancy.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ learndash
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+# @ learndash
+#: content-none.php:17
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr "Er zijn geen resultaten gevonden. Doe een nieuwe zoekopdracht."
+
+# @ learndash
+#: content.php:13
+msgid "Featured post"
+msgstr "Bericht"
+
+# @ learndash
+#: content.php:22
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink naar %s"
+
+# @ learndash
+#: content.php:27
+msgid "Leave a reply"
+msgstr "Laat een bericht achter"
+
+# @ learndash
+#: content.php:27
+msgid "1 Reply"
+msgstr "1 bericht"
+
+# @ learndash
+#: content.php:27
+msgid "% Replies"
+msgstr "% berichten"
+
+# @ learndash
+#: content.php:41
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lees verder <span class=\"meta-nav\">&rarr;</span>"
+
+# @ learndash
+#: content.php:47
+msgid "Pages:"
+msgstr "Pagina's:"
+
+# @ learndash
+#: content.php:68
+#, php-format
+msgid "View all posts by %s"
+msgstr "Bekijk alle bericht op %s"
+
+# @ learndash
+#: content.php:74
+#, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s on %3$s<span class=\"by-author"
+"\"> by %4$s</span>."
+msgstr ""
+"Deze invoer is opgeslagen in %1$s en tagged %2$s  op  %3$s<span class=\"by-"
+"author\"> door %4$s</span>."
+
+# @ learndash
+#: content.php:76
+#, php-format
+msgid ""
+"This entry was posted in %1$s on %3$s<span class=\"by-author\"> by %4$s</"
+"span>."
+msgstr ""
+"Deze invoer is opgeslagen in %1$s op %3$s<span class=\"by-author\"> door "
+"%4$s</span>."
+
+# @ learndash
+#: content.php:78
+#, php-format
+msgid "This entry was posted on %3$s<span class=\"by-author\"> by %4$s</span>."
+msgstr ""
+"Deze invoer is opgeslagen op %3$s<span class=\"by-author\"> door %4$s</span>."
+
+# @ learndash
+#: content.php:89
+msgid "Edit"
+msgstr "Pas aan"
+
+# @ learndash
+#: content.php:96
+#, php-format
+msgid "About %s"
+msgstr "Over %s"
+
+# @ learndash
+#: content.php:100
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Bekijk alle berichten door %s <span class=\"meta-nav\">&rarr;</span>"
+
+# @ learndash
+#: conv_pdf.php:59
+msgid "Post does not exist."
+msgstr "Bericht bestaat niet"
+
+# @ learndash
+#: conv_pdf.php:120
+msgid "<strong>Error: Directory not found.</strong><br /><br />Path: "
+msgstr "<strong>Fout: Directory niet gevonden.</strong><br /><br />Pad:"
+
+# @ learndash
+#: conv_pdf.php:426
+msgid ""
+"<strong>Generating completed successfully.</strong><br /><br />Post/Page "
+"title: "
+msgstr ""
+"<strong>Het maken volledig gelukt.</strong><br /><br />Bericht/Paginatitel: "
+
+# @ learndash
+#: conv_pdf.php:426
+msgid "<br />Output path: "
+msgstr "<br />Output pad:"
+
+# @ learndash
+#: conv_pdf.php:426
+msgid "<br /><br />Go back to "
+msgstr "<br /><br />Ga terug naar"
+
+# @ learndash
+#: conv_pdf.php:426
+msgid "the settig panel</a>."
+msgstr "het instellingenpaneel</a>."
+
+# @ learndash
+#: conv_pdf.php:426
+msgid "POST2PDF Converter"
+msgstr "POST2PDF Converter"
+
+# @ learndash
+#: course_info_widget.php:6
+msgid ""
+"LearnDash - Course attempt and score information of users. Visible only to "
+"users logged in."
+msgstr ""
+"LearnDash - Informatie over de modules en resultaten van de deelnemers. Dit "
+"is alleen zichtbaar voor ingelogde deelnemers."
+
+# @ learndash
+#: course_info_widget.php:8
+msgid "Course Information"
+msgstr "Informatie over de module"
+
+# @ learndash
+#: course_info_widget.php:49 course_progress.php:634 sfwd_cpt.php:262
+msgid "Title:"
+msgstr "Titel:"
+
+# @ learndash
+#: course_progress.php:40 course_progress.php:79
+msgid "Mark Complete"
+msgstr "Klik hier indien je dit hoofdstuk hebt afgerond"
+
+# @ learndash
+#: course_progress.php:392
+msgid "Not Started"
+msgstr "Nog niet gestart"
+
+# @ learndash
+#: course_progress.php:394
+msgid "In Progress"
+msgstr "Wel gestart en nog niet afgerond"
+
+# @ learndash
+#: course_progress.php:396 sfwd_lms.php:484
+msgid "Completed"
+msgstr "Afgerond"
+
+# @ learndash
+#: course_progress.php:597
+msgid "LearnDash course progress bar"
+msgstr "LearnDash module voortgangsbalk"
+
+# @ learndash
+#: course_progress.php:599
+msgid "Course Progress Bar"
+msgstr "Voortgang van de module"
+
+# @ learndash
+#: quiz_pro.php:128
+msgid "PRINT YOUR CERTIFICATE!"
+msgstr "Print je certificaat"
+
+# @ learndash
+#: sfwd_cpt.php:19
+msgid "Add New"
+msgstr "Voeg nieuwe toe"
+
+# @ learndash
+#: sfwd_cpt.php:21
+#, php-format
+msgid "Add New %s"
+msgstr "Voeg nieuwe %s toe"
+
+# @ learndash
+#: sfwd_cpt.php:22
+#, php-format
+msgid "Edit %s"
+msgstr "Wijzig %s"
+
+# @ learndash
+#: sfwd_cpt.php:23
+#, php-format
+msgid "New %s"
+msgstr "Nieuw %s"
+
+# @ learndash
+#: sfwd_cpt.php:24
+#, php-format
+msgid "View %s"
+msgstr "Bekijk %s"
+
+# @ learndash
+#: sfwd_cpt.php:25
+#, php-format
+msgid "Search %s"
+msgstr "Zoek %s"
+
+# @ learndash
+#: sfwd_cpt.php:26
+#, php-format
+msgid "No %s found"
+msgstr "Geen %s gevonden"
+
+# @ learndash
+#: sfwd_cpt.php:27
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Geen %s gevonden in de prullenbak"
+
+# @ learndash
+#: sfwd_cpt.php:28
+#, php-format
+msgid "Parent %s"
+msgstr "Bovenstaand %s"
+
+# @ learndash
+#: sfwd_cpt.php:211
+#, php-format
+msgid "Displays a list of %s"
+msgstr "Toon een lijst van %s."
+
+# @ learndash
+#: sfwd_lms.php:199
+msgid "Courses"
+msgstr "Modules"
+
+# @ learndash
+#: sfwd_lms.php:203 sfwd_lms.php:296 sfwd_lms.php:338
+msgid "Manage Course Associations"
+msgstr "Beheer module associaties"
+
+# @ learndash
+#: sfwd_lms.php:208
+msgid "Course Materials"
+msgstr "Gebruikte materiaal in de module"
+
+# @ learndash
+#: sfwd_lms.php:210
+msgid "Options for course materials"
+msgstr "Opties voor het gebruikte materiaal in de module"
+
+# @ learndash
+#: sfwd_lms.php:214
+msgid "Course Price"
+msgstr "Prijs voor de module"
+
+# @ learndash
+#: sfwd_lms.php:216
+msgid "Options for course price"
+msgstr "Opties voor de prijs van een module"
+
+# @ learndash
+#: sfwd_lms.php:219
+msgid "Course Access List"
+msgstr "Module toevoegingslijst"
+
+# @ learndash
+#: sfwd_lms.php:221
+msgid "Access list for courses."
+msgstr "Toegangslijst voor alle modules."
+
+# @ learndash
+#: sfwd_lms.php:224
+msgid "Sort Lesson By"
+msgstr "Sorteer hoofdstukken door"
+
+# @ learndash
+#: sfwd_lms.php:227 sfwd_lms.php:239
+msgid "Use Default"
+msgstr "Gebruik standaard"
+
+# @ learndash
+#: sfwd_lms.php:228 sfwd_lms.php:307 sfwd_lms.php:389 sfwd_lms.php:782
+msgid "Title"
+msgstr "Titel"
+
+# @ learndash
+#: sfwd_lms.php:229 sfwd_lms.php:308 sfwd_lms.php:390 sfwd_lms.php:783
+msgid "Date"
+msgstr "Datum"
+
+# @ learndash
+#: sfwd_lms.php:230 sfwd_lms.php:309 sfwd_lms.php:391 sfwd_lms.php:784
+msgid "Menu Order"
+msgstr "Menu volgorde"
+
+# @ learndash
+#: sfwd_lms.php:233 sfwd_lms.php:244
+msgid "Choose the sort order of lessons in this course."
+msgstr ""
+"Kies een manier voor de sorteervolgorde van de hoofdstukken te bepalen."
+
+# @ learndash
+#: sfwd_lms.php:236
+msgid "Sort Lesson Direction"
+msgstr "Sorteer hoofdstukken"
+
+# @ learndash
+#: sfwd_lms.php:240 sfwd_lms.php:319 sfwd_lms.php:401 sfwd_lms.php:794
+msgid "Ascending"
+msgstr "Oplopend"
+
+# @ learndash
+#: sfwd_lms.php:241 sfwd_lms.php:320 sfwd_lms.php:402 sfwd_lms.php:795
+msgid "Descending"
+msgstr "Aflopend"
+
+# @ learndash
+#: sfwd_lms.php:247
+msgid "Disable Lesson Progression"
+msgstr "Uitschakeling van de hoofdstuk progressie"
+
+# @ learndash
+#: sfwd_lms.php:250
+msgid ""
+"Disable the feature that allows attempting lessons only in allowed order."
+msgstr ""
+"Uitschakeling van de functie welke het toestaat de hoofdstukken in een "
+"bepaalde volgende te volgen."
+
+# @ learndash
+#: sfwd_lms.php:254
+msgid "PayPal Email"
+msgstr "PayPal email"
+
+# @ learndash
+#: sfwd_lms.php:254
+msgid "Enter your PayPal email here."
+msgstr "Voeg hier je PayPal email toe."
+
+# @ learndash
+#: sfwd_lms.php:255
+msgid "PayPal Currency"
+msgstr "PayPal valuta"
+
+# @ learndash
+#: sfwd_lms.php:255
+msgid "Enter the currency code for transactions."
+msgstr "Voer hier de valutacode voor transacties in."
+
+# @ learndash
+#: sfwd_lms.php:256
+msgid "PayPal Country"
+msgstr "PayPal land"
+
+# @ learndash
+#: sfwd_lms.php:256
+msgid "Enter your country code here."
+msgstr "Voer hier je landcode in"
+
+# @ learndash
+#: sfwd_lms.php:257
+msgid "PayPal Cancel URL"
+msgstr "PayPal wijzig URL"
+
+# @ learndash
+#: sfwd_lms.php:257
+msgid "Enter the URL used for purchase cancellations."
+msgstr "Voer de URL welke gebruikt wordt om aankoop te niet te doen."
+
+# @ learndash
+#: sfwd_lms.php:258
+msgid "PayPal Return URL"
+msgstr "PayPal Return URL"
+
+# @ learndash
+#: sfwd_lms.php:258
+msgid ""
+"Enter the URL used for completed purchases (typically a thank you page)."
+msgstr ""
+"Voer de URL in welke gebruikt kan worden voor volledige aankopen (een "
+"bedankpagina)."
+
+# @ learndash
+#: sfwd_lms.php:259
+msgid "PayPal Notify URL"
+msgstr "PayPal informatie URL"
+
+# @ learndash
+#: sfwd_lms.php:259
+msgid "Enter the URL used for IPN notifications."
+msgstr "Voer een URL welke gebruikt wordt voor IPN notificaties."
+
+# @ learndash
+#: sfwd_lms.php:260
+msgid "Use PayPal Sandbox"
+msgstr "Gebruik PayPal Sandbox"
+
+# @ learndash
+#: sfwd_lms.php:260
+msgid "Check to enable the PayPal sandbox."
+msgstr "Klik om de PayPal sandbox in te schakelen."
+
+# @ learndash
+#: sfwd_lms.php:262 sfwd_lms.php:264
+msgid "Shortcode Options"
+msgstr "Shortcode opties"
+
+# @ learndash
+#: sfwd_lms.php:266
+msgid ""
+"You may use shortcodes to add information to any page/course/lesson/quiz. "
+"Here are built-in shortcodes for displaying relavent user information."
+msgstr ""
+"Je kunt shortcodes gebruiken om informatie toe te voegen aan iedere pagina, "
+"module, hoofdstuk, toets. Hier staan shortcodes om relevante "
+"deelnemersinformatie te tonen."
+
+# @ learndash
+#: sfwd_lms.php:267
+msgid ""
+"This shortcode displays the users course progress and list of quiz scores."
+msgstr ""
+"Deze shortcode toont de modulevoortgang van de deelnemers en een lijst met "
+"de resultaten van de toets."
+
+# @ learndash
+#: sfwd_lms.php:270
+msgid ""
+"This shortcode shows list of courses. You can use this short code on any "
+"page if you dont want to use the default /courses page. This short code can "
+"take following parameters:"
+msgstr ""
+"Deze shortcode toont een lijst van modules. Je kunt deze shortcode in iedere "
+"pagina gebruiken indien je niet de standaard/module pagina wilt gebruiken. "
+"Deze shortcode kan bestaan uit de volgende parameters:"
+
+# @ learndash
+#: sfwd_lms.php:272
+msgid ""
+"limits the number of courses displayed. Example: <b>[ld_course_list num="
+"\"10\"]</b> shows 10 courses."
+msgstr ""
+"beperkt het aantal getoonde modules. Voorbeeld: <b>[ld_course_list num="
+"\"10\"]</b> toont 10 module."
+
+# @ learndash
+#: sfwd_lms.php:273
+msgid ""
+"sets order of courses. Possible values: <b>DESC</b>, <b>ASC</b>. Example: <b>"
+"[ld_course_list order=\"ASC\"]</b> shows courses in assending order."
+msgstr ""
+"bepaalt de volgorde van de modules. Mogelijkheden: <b>DESC</b>, <b>ASC</b>. "
+"Voorbeeld: <b>[ld_course_list order=\"ASC\"]</b> toont de modules in een "
+"oplopende volgorde."
+
+# @ learndash
+#: sfwd_lms.php:274
+msgid ""
+"sets what the list of ordered by. Example: <b>[ld_course_list order=\"ASC\" "
+"orderby=\"title\"]</b> shows courses in assending order by title."
+msgstr ""
+"toont een lijst door wie wat besteld is. Voorbeeld:<b>DESC</b>, <b>ASC</b>. "
+"Voorbeeld: <b>[ld_course_list order=\"ASC\"]</b> toont de modules in een "
+"oplopende volgorde."
+
+# @ learndash
+#: sfwd_lms.php:275
+msgid ""
+"shows courses with mentioned tag. Example: <b>[ld_course_list tag=\"math\"]</"
+"b> shows courses having tag math."
+msgstr ""
+"toont modules met een ingesteld label. Voorbeeld:<b>[ld_course_list tag="
+"\"math\"]</b> toont modules welke een berekening bevatten."
+
+# @ learndash
+#: sfwd_lms.php:276
+msgid ""
+"shows courses with mentioned tag_id. Example: <b>[ld_course_list tag_id="
+"\"30\"]</b> shows courses having tag with tag_id 30."
+msgstr ""
+"toont modules met een ingesteld label. Voorbeeld:<b>[ld_course_list tag="
+"\"math\"]</b> toont modules welke een berekening bevatten."
+
+# @ learndash
+#: sfwd_lms.php:277
+msgid ""
+"show current user's courses. Example: <b>[ld_course_list mycourses=\"true\"]"
+"</b> shows courses the current user has access to."
+msgstr ""
+"toont modules met een ingesteld label. Voorbeeld:<b>[ld_course_list tag="
+"\"math\"]</b> toont modules welke een berekening bevatten."
+
+# @ learndash
+#: sfwd_lms.php:279
+msgid ""
+"See <a target=\"_blank\" href=\"https://codex.wordpress.org/Class_Reference/"
+"WP_Query#Order_.26_Orderby_Parameters\">the full list of available orderby "
+"options here.</a>"
+msgstr ""
+"Bekijk <a target=\"_blank\" href=\"https://codex.wordpress.org/"
+"Class_Reference/WP_Query#Order_.26_Orderby_Parameters\">de volledige lijst "
+"van beschikbare orderopties hier.</a>"
+
+# @ learndash
+#: sfwd_lms.php:281
+msgid ""
+"This shortcode shows list of lessons. You can use this short code on any "
+"page. This short code can take following parameters: num, order, orderby, "
+"tag, tag_id. See [ld_course_list] above details on using the shortcode "
+"parameters."
+msgstr ""
+"Deze shortcode toont de lijst met hoofdstukken. Je kunt deze shortcode op "
+"iedere pagina gebruiken. Deze shortcode kan de volgende parameters bevatten: "
+"num, order, orderby, tag, tag_id. Bekijk [ld_course_list] bovenstaande "
+"details voor het gebruik van de shortcode parameters."
+
+# @ learndash
+#: sfwd_lms.php:283
+msgid ""
+"This shortcode shows list of quizzes. You can use this short code on any "
+"page. This short code can take following parameters: num, order, orderby, "
+"tag, tag_id. See [ld_course_list] above details on using the shortcode "
+"parameters."
+msgstr ""
+"Deze shortcode toont de lijst met toetsen. Je kunt deze shortcode op iedere "
+"pagina gebruiken. Deze shortcode kan de volgende parameters bevatten: num, "
+"order, orderby, tag, tag_id. Bekijk [ld_course_list] bovenstaande details "
+"voor het gebruik van de shortcode parameters."
+
+# @ learndash
+#: sfwd_lms.php:285
+msgid ""
+"This shortcode displays users progress bar for the course in any course/"
+"lesson/quiz pages."
+msgstr ""
+"Deze shortcode toont de deelnemers voortgangsbalk voor de module in iedere "
+"module/hoofdstuk/toets pagina's."
+
+# @ learndash
+#: sfwd_lms.php:292 sfwd_lms.php:945
+msgid "Lessons"
+msgstr "Hoofdstukken"
+
+# @ learndash
+#: sfwd_lms.php:299
+msgid "Forced Lesson Timer"
+msgstr "Timer voor de hoofdstukken"
+
+# @ learndash
+#: sfwd_lms.php:299
+msgid ""
+"Minimum time a user has to spend on Lesson page before it can be marked "
+"complete. Examples: 40 (for 40 seconds), 20s, 45sec, 2m 30s, 2min 30sec, 1h "
+"5m 10s, 1hr 5min 10sec"
+msgstr ""
+"Minimum tijd welke een deelnemer kan besteden aan een hoofdstuk voordat het "
+"als afgerond wordt aangemerkt. Voorbeelden: 40 (for 40 seconds), 20s, 45sec, "
+"2m 30s, 2min 30sec, 1h 5m 10s, 1hr 5min 10sec"
+
+# @ learndash
+#: sfwd_lms.php:303 sfwd_lms.php:385 sfwd_lms.php:778
+msgid "Sort By"
+msgstr "Gesorteerd op"
+
+# @ learndash
+#: sfwd_lms.php:306 sfwd_lms.php:318 sfwd_lms.php:388 sfwd_lms.php:400
+#: sfwd_lms.php:781 sfwd_lms.php:793
+msgid "Select a choice..."
+msgstr "Maak een keuze ..."
+
+# @ learndash
+#: sfwd_lms.php:312 sfwd_lms.php:323 sfwd_lms.php:394 sfwd_lms.php:405
+#: sfwd_lms.php:787 sfwd_lms.php:798
+msgid "Choose the sort order."
+msgstr "Kies de sorteervolgorde."
+
+# @ learndash
+#: sfwd_lms.php:315 sfwd_lms.php:397 sfwd_lms.php:790
+msgid "Sort Direction"
+msgstr "Sorteer volgorde"
+
+# @ learndash
+#: sfwd_lms.php:326 sfwd_lms.php:408 sfwd_lms.php:801
+msgid "Posts Per Page"
+msgstr "Berichten per pagina"
+
+# @ learndash
+#: sfwd_lms.php:328 sfwd_lms.php:410 sfwd_lms.php:803
+msgid "Enter the number of posts to display per page."
+msgstr "Voer het aantal berichten dat je per pagina wilt tonen in."
+
+# @ learndash
+#: sfwd_lms.php:334 sfwd_lms.php:949 sfwd_lms.php:1004
+msgid "Quizzes"
+msgstr "Toetsen"
+
+# @ learndash
+#: sfwd_lms.php:342
+msgid "Repeats"
+msgstr "Herhalingen"
+
+# @ learndash
+#: sfwd_lms.php:342
+msgid "Number of repeats allowed for quiz"
+msgstr "Het aantal keren dat het toegestaan is een toets te maken"
+
+# @ learndash
+#: sfwd_lms.php:343
+msgid "Certificate Threshold"
+msgstr "Certificaten"
+
+# @ learndash
+#: sfwd_lms.php:343
+msgid ""
+"Minimum score required to award a certificate, between 0 and 1 where 1 = "
+"100%."
+msgstr ""
+"Minimum score welke vereist is om een certificaat te verkrijgen, tussen 0 en "
+"1, waarbij 1 = 100%."
+
+# @ learndash
+#: sfwd_lms.php:344
+msgid "Passing Percentage"
+msgstr "Slagingspercentage"
+
+# @ learndash
+#: sfwd_lms.php:344
+msgid ""
+"Passing percentage required to pass the quiz (number only). e.g. 80 for 80%."
+msgstr ""
+"Slagingspercentage welke vereist is om te slagen voor een toets (alleen "
+"getallen, geen percentageteken gebruiken)."
+
+# @ learndash
+#: sfwd_lms.php:345
+msgid "Associated Lesson"
+msgstr "Aanverwant hoofdstuk"
+
+# @ learndash
+#: sfwd_lms.php:345
+msgid "Optionally associate a quiz with a lesson."
+msgstr "Optioneel maak een toets verwant aan een hoofdstuk."
+
+# @ learndash
+#: sfwd_lms.php:346
+msgid "Associated Certificate"
+msgstr "Aanverwant certificaat"
+
+# @ learndash
+#: sfwd_lms.php:346
+msgid "Optionally associate a quiz with a certificate."
+msgstr "Maak optioneel een toets verwant aan een certificaat."
+
+# @ learndash
+#: sfwd_lms.php:347
+msgid "Advanced Quiz"
+msgstr "Gevordende toets"
+
+# @ learndash
+#: sfwd_lms.php:347
+msgid ""
+"Select an Advanced. Quiz, or build a Simple Quiz below. You can create an "
+"Advanced Quiz <a href=\""
+msgstr ""
+"Selecteer een gevordende toets, of maak onderstaand een eenvoudige toets. Je "
+"kunt een gevordende toets maken <a href=\""
+
+# @ learndash
+#: sfwd_lms.php:349 sfwd_lms.php:499
+msgid "Quiz"
+msgstr "Toets"
+
+# @ learndash
+#: sfwd_lms.php:351
+msgid "Options for quiz"
+msgstr "Opties voor een toets"
+
+# @ learndash
+#: sfwd_lms.php:354
+msgid ""
+"You may select a quiz above or edit your quiz below once this post is "
+"created. <b style=\"color:#f00;\">All fields are required and MUST be filled "
+"in, or data will be lost</b>, quizzes are in multiple choice format."
+msgstr ""
+"Je kunt bovenstaande toets selecteren of onderstaande toets wijzigen indien "
+"dit bericht eenmaal is gemaakt. <b style=\"color:#f00;\">Alle velden zijn "
+"vereist en dienen ingevuld te worden. Indien dit niet het geval is gaat de "
+"data verloren</b>. Toetsen zijn in een multiple choice formaat. "
+
+# @ learndash
+#: sfwd_lms.php:358
+msgid "Start Button Text"
+msgstr "Tekst van de startknop"
+
+# @ learndash
+#: sfwd_lms.php:358
+msgid "Display this text on the start button for the quiz"
+msgstr "Toon deze tekst van de startknop van de toets"
+
+# @ learndash
+#: sfwd_lms.php:358
+msgid "Get Started!"
+msgstr "Starten!"
+
+# @ learndash
+#: sfwd_lms.php:359
+msgid "Check Answer Text"
+msgstr "Controleer de antwoorden"
+
+# @ learndash
+#: sfwd_lms.php:359
+msgid "Text displayed for check answer button."
+msgstr "Getoonde tekst voor de knop om het antwoord te controleren."
+
+# @ learndash
+#: sfwd_lms.php:359
+msgid "Check My Answer!"
+msgstr "Controleer mijn antwoord!"
+
+# @ learndash
+#: sfwd_lms.php:360
+msgid "Next Question Text"
+msgstr "Tekst voor de volgende vraag"
+
+# @ learndash
+#: sfwd_lms.php:360
+msgid "Text displayed for next question button."
+msgstr "Getoonde tekst voor de knop voor de volgende vraag."
+
+# @ learndash
+#: sfwd_lms.php:360
+msgid "Next >>"
+msgstr "Volgende >>"
+
+# @ learndash
+#: sfwd_lms.php:361
+msgid "Back Button Text"
+msgstr "Tekst voor de knop om terug te gaan"
+
+# @ learndash
+#: sfwd_lms.php:361
+msgid "Text displayed for back button."
+msgstr "Getoonde tekst voor de knop om terug te gaan"
+
+# @ learndash
+#: sfwd_lms.php:362
+msgid "Your Score Text"
+msgstr "De tekst voor je behaalde resultaat"
+
+# @ learndash
+#: sfwd_lms.php:362
+msgid "Text displayed for your score prompt."
+msgstr "Getoonde tekst voor je behaalde resultaat."
+
+# @ learndash
+#: sfwd_lms.php:362
+msgid "Your Score:"
+msgstr "Je behaalde resultaat:"
+
+# @ learndash
+#: sfwd_lms.php:363
+msgid "Your Ranking Text"
+msgstr "De tekst voor de score."
+
+# @ learndash
+#: sfwd_lms.php:363
+msgid "Text displayed for your ranking prompt."
+msgstr "Getoonde tekst voor je score."
+
+# @ learndash
+#: sfwd_lms.php:363
+msgid "Your Ranking:"
+msgstr "Je behaalde resultaat:"
+
+# @ learndash
+#: sfwd_lms.php:364
+msgid "Disabled Quiz Message"
+msgstr "Sta toetsbericht niet toe"
+
+# @ learndash
+#: sfwd_lms.php:364
+msgid "Message displayed for disabled quizzes."
+msgstr "Getoonde bericht voor toetsen die niet beschikbaar zijn."
+
+# @ learndash
+#: sfwd_lms.php:364
+msgid "Sorry. The requested quiz has been disabled."
+msgstr "Sorry. De verzochte toets is uitgeschakeld."
+
+# @ learndash
+#: sfwd_lms.php:365
+msgid "Missing Quiz Message"
+msgstr "Bericht voor de situatie dat er een toets niet aanwezig is."
+
+# @ learndash
+#: sfwd_lms.php:365
+msgid "Message displayed for missing quizzes."
+msgstr "Getoonde bericht voor de situatie dat er een toets niet aanwezig is."
+
+# @ learndash
+#: sfwd_lms.php:365
+msgid "Sorry The requested quiz could not be found."
+msgstr "Sorry. De verzochte toets kan niet worden gevonden."
+
+# @ learndash
+#: sfwd_lms.php:366
+msgid "Knowledge Level 1"
+msgstr "Kennisniveau 1"
+
+# @ learndash
+#: sfwd_lms.php:366
+msgid "Name for knowledge level 1 (from best to worst, 1 - 5)"
+msgstr "Naam voor kennisniveau 1 (van goed naar slecht, 1 - 5)"
+
+# @ learndash
+#: sfwd_lms.php:367
+msgid "Knowledge Level 2"
+msgstr "Uitstekend"
+
+# @ learndash
+#: sfwd_lms.php:367
+msgid "Name for knowledge level 2 (from best to worst, 1 - 5)"
+msgstr "Naam voor kennisniveau 2 (van goed naar slecht, 1 - 5)"
+
+# @ learndash
+#: sfwd_lms.php:367
+msgid "Expert"
+msgstr "Zeer goed"
+
+# @ learndash
+#: sfwd_lms.php:368
+msgid "Knowledge Level 3"
+msgstr "Kennisniveau 3"
+
+# @ learndash
+#: sfwd_lms.php:368
+msgid "Name for knowledge level 3 (from best to worst, 1 - 5)"
+msgstr "Naam voor kennisniveau 4 (van goed naar slecht, 1 - 5)"
+
+# @ learndash
+#: sfwd_lms.php:368
+msgid "Intermediate"
+msgstr "Goed"
+
+# @ learndash
+#: sfwd_lms.php:369
+msgid "Knowledge Level 4"
+msgstr "Kennisniveau 4"
+
+# @ learndash
+#: sfwd_lms.php:369
+msgid "Name for knowledge level 4 (from best to worst, 1 - 5)"
+msgstr "Naam voor kennisniveau 4 (van goed naar slecht, 1 - 5)"
+
+# @ learndash
+#: sfwd_lms.php:369
+msgid "Initiate"
+msgstr "Voldoende"
+
+# @ learndash
+#: sfwd_lms.php:370
+msgid "Knowledge Level 5"
+msgstr "Kennisniveau 5"
+
+# @ learndash
+#: sfwd_lms.php:370
+msgid "Name for knowledge level 5 (from best to worst, 1 - 5)"
+msgstr "Naam voor kennisniveau 5 (van goed naar slecht, 1 - 5)"
+
+# @ learndash
+#: sfwd_lms.php:370
+msgid "Beginner"
+msgstr "Onvoldoende"
+
+# @ learndash
+#: sfwd_lms.php:371
+msgid "Select Certificate"
+msgstr "Selecteer een certificaat"
+
+# @ learndash
+#: sfwd_lms.php:371
+msgid "Select a Post to use as a Certificate For Quizzes."
+msgstr "Selecteer een bericht om een certificaat voor toetsen te gebruiken."
+
+# @ learndash
+#: sfwd_lms.php:372
+msgid "Correct Response Message"
+msgstr "Bericht voor een juist antwoord"
+
+# @ learndash
+#: sfwd_lms.php:372
+msgid "Message text for a correct quiz response."
+msgstr "Bericht voor een juist toets antwoord."
+
+# @ learndash
+#: sfwd_lms.php:373
+msgid "Incorrect Response Message"
+msgstr "Bericht voor een onjuist toets antwoord."
+
+# @ learndash
+#: sfwd_lms.php:373
+msgid "Message text for an incorrect quiz response."
+msgstr "Tekst van het bericht voor een onjuist toets antwoord."
+
+# @ learndash
+#: sfwd_lms.php:374
+msgid "Random Sort Questions"
+msgstr "Willekeurige sortering van de vragen"
+
+# @ learndash
+#: sfwd_lms.php:374
+msgid "Random sort questions option."
+msgstr "Opties voor de wllekeurige sortering van de vragen."
+
+# @ learndash
+#: sfwd_lms.php:375
+msgid "Random Sort Answers"
+msgstr "Willekeurige sortering van de antwoorden."
+
+# @ learndash
+#: sfwd_lms.php:375
+msgid "Random sort answers option."
+msgstr "Opties voor de wllekeurige sortering van de antwoorden."
+
+# @ learndash
+#: sfwd_lms.php:376
+msgid "Random Sort"
+msgstr "Willekeurige sortering"
+
+# @ learndash
+#: sfwd_lms.php:376
+msgid "Random sort option."
+msgstr "Opties voor de willekeurige sortering."
+
+# @ learndash
+#: sfwd_lms.php:377
+msgid "Disable Next"
+msgstr "Uitschakeling Volgende"
+
+# @ learndash
+#: sfwd_lms.php:377
+msgid "Disable the next option."
+msgstr "Uitschaking van de volgende mogelijkheid."
+
+# @ learndash
+#: sfwd_lms.php:378
+msgid "Disable Responses"
+msgstr "Uitschakeling van de mogelijkheid van reacties"
+
+# @ learndash
+#: sfwd_lms.php:378
+msgid "Disable responses."
+msgstr "Uitschakeling van de mogelijkheid van reacties"
+
+# @ learndash
+#: sfwd_lms.php:379
+msgid "Completion Responses"
+msgstr "Voltooiing van de reacties"
+
+# @ learndash
+#: sfwd_lms.php:379
+msgid "Enable completion responses."
+msgstr "Uitschakelen van voltooiing van reacties "
+
+# @ learndash
+#: sfwd_lms.php:416
+msgid ""
+"<b>Shortcode Options</b><p>You may use shortcodes to customize the display "
+"of your certificates. Provided is a built-in shortcode for displaying user "
+"information.</p><p><b>[usermeta]</b><p>This shortcode takes a parameter "
+"named field, which is the name of the user meta data field to be displayed.</"
+"p><p>Example: <b>[usermeta field=\"display_name\"]</b> would display the "
+"user's Display Name.</p><p>See <a href=\"http://codex.wordpress.org/"
+"Function_Reference/get_userdata#Notes\">the full list of available fields "
+"here</a>.</p>"
+msgstr ""
+"<b>Shortcode opties<b><p>Je kunt shortcodes gebruiken om je certificaten aan "
+"te passen. Er bevindt zich een ingebouwde shortcode om deelnemersinformatie "
+"te tonen.</p><p><b>[usermeta]</b><p>Deze shortcode neemt een parameter "
+"genaamd veld, welke is de naam van de deelnemers meta data veld welke "
+"getoond wordt. </p><p>Voorbeeld: <b>[usermeta field=\"display_name\"]</b> "
+"zal de deelnemers Display Name tonen.</p><p>See <a href=\"http://codex."
+"wordpress.org/Function_Reference/get_userdata#Notes\">de volledige lijst van "
+"geschikbare veld hier</a>.</p>"
+
+# @ learndash
+#: sfwd_lms.php:423
+msgid "Certificates"
+msgstr "Certificaten"
+
+# @ learndash
+#: sfwd_lms.php:435
+msgid "Transactions"
+msgstr "Transacties"
+
+# @ learndash
+#: sfwd_lms.php:441
+msgid "Click the Export button below to export the transaction list."
+msgstr "Klik de onderstaande export knop om de transactielijst te exporteren."
+
+# @ learndash
+#: sfwd_lms.php:461
+msgid "Course Info"
+msgstr "Informatie over de module"
+
+# @ learndash
+#: sfwd_lms.php:469
+msgid "You are registered for the following courses"
+msgstr "Je bent geregistreerd voor de volgende modules"
+
+# @ learndash
+#: sfwd_lms.php:480
+msgid "Course progress details:"
+msgstr "Details van de voortgang van de module:"
+
+# @ learndash
+#: sfwd_lms.php:484
+msgid "out of"
+msgstr "van"
+
+# @ learndash
+#: sfwd_lms.php:484
+msgid "steps"
+msgstr "Stappen"
+
+# @ learndash
+#: sfwd_lms.php:491
+msgid "<h4>You have taken the following quizzes</h4>"
+msgstr "<h4>Je hebt de volgende toetsen gemaakt<h4>"
+
+# @ learndash
+#: sfwd_lms.php:512
+msgid "Rank: "
+msgstr "Stand:"
+
+# @ learndash
+#: sfwd_lms.php:514
+msgid "Score "
+msgstr "Score"
+
+# @ learndash
+#: sfwd_lms.php:514
+msgid " out of "
+msgstr "van"
+
+# @ learndash
+#: sfwd_lms.php:514
+msgid " question(s)"
+msgstr "vraag"
+
+# @ learndash
+#: sfwd_lms.php:516
+msgid " . Points: "
+msgstr ".Punten:"
+
+# @ learndash
+#: sfwd_lms.php:517
+msgid " on "
+msgstr "op"
+
+# @ learndash
+#: sfwd_lms.php:532 sfwd_lms.php:590 sfwd_lms.php:637
+#: sfwd_module_class.php:686
+msgid ""
+"Security Check - If you receive this in error, log out and back in to "
+"WordPress"
+msgstr ""
+"Veiligheidscontrole. Indien je een foutmelding ontvangt, log uit en keer "
+"terug in de WordPress"
+
+# @ learndash
+#: sfwd_lms.php:572
+msgid "No user course data found!"
+msgstr "Er kan geen deelnemersgegevens worden gevonden!"
+
+# @ learndash
+#: sfwd_lms.php:579
+msgid "Export User Course Data &raquo;"
+msgstr "Exporteer deelnemersdata van de module &raquo;"
+
+# @ learndash
+#: sfwd_lms.php:627
+msgid "Export Quiz Data &raquo;"
+msgstr "Exporteer deelnemersdata van de toets &raquo;"
+
+# @ learndash
+#: sfwd_lms.php:665
+msgid "Export &raquo;"
+msgstr "Exporteer &raquo;"
+
+# @ learndash
+#: sfwd_lms.php:690 sfwd_lms.php:707
+msgid "-- Select A Certificate --"
+msgstr "--Selecteer een certificaat--"
+
+# @ learndash
+#: sfwd_lms.php:699
+msgid "-- Select A Lesson --"
+msgstr "--Selecteer een hoofdstuk--"
+
+# @ learndash
+#: sfwd_lms.php:763
+msgid "Options for "
+msgstr "Opties voor"
+
+# @ learndash
+#: sfwd_lms.php:779
+msgid "select"
+msgstr "selecteer"
+
+# @ learndash
+#: sfwd_lms.php:920
+msgid ""
+"The buyer PayPal email is empty; please configure this in the plugin or use "
+"alternative payment gateway."
+msgstr ""
+"De PayPal e-mail van de koper is leeg; configureer dit in de plugin of kies "
+"een andere betalingsmogelijkheid."
+
+# @ learndash
+#: sfwd_lms.php:972
+msgid "Please go back and complete the previous lesson.<br>"
+msgstr "Keer terug en maak het vorige hoofdstuk af.<br>"
+
+# @ learndash
+#: sfwd_lms.php:980
+msgid ""
+"You have already taken this quiz $count times and may not take it again."
+msgstr "Het is voor jou niet toegestaan de toets nogmaals te maken."
+
+# @ learndash
+#: sfwd_lms.php:1007
+msgid "Please go back and complete the previous lesson."
+msgstr "Keer terug en maak het vorige hoofdstuk af.<br>"
+
+# @ learndash
+#: sfwd_lms.php:1080
+msgid "Access to certificate page is disallowed."
+msgstr "Toegang naar de certificatenpagina is niet toegestaan."
+
+# @ learndash
+#: sfwd_lms.php:1207 sfwd_lms.php:1219 sfwd_lms.php:1245
+msgid "Something went wrong, please try again."
+msgstr "Er is iets fout gegaan. Probeer het nogmaals."
+
+# @ learndash
+#: sfwd_lms.php:1243
+msgid "Quiz data was saved!"
+msgstr "Toetsgegevens zijn opgeslagen!"
+
+# @ learndash
+#: sfwd_lms.php:1629
+msgid "Previous Lesson"
+msgstr "Vorig hoofdstuk"
+
+# @ learndash
+#: sfwd_lms.php:1661
+msgid "Next Lesson"
+msgstr "Volgend hoofdstuk"
+
+# @ learndash
+#: sfwd_lms.php:1949 sfwd_lms.php:1956
+msgid "Click Here to Continue "
+msgstr "Klik hier om verder te gaan"
+
+# @ learndash
+#: sfwd_module_class.php:528
+msgid "Upload Image"
+msgstr "Upload een afbeelding"
+
+# @ learndash
+#: sfwd_module_class.php:539
+#, php-format
+msgid " characters. Most search engines use a maximum of %s chars for the %s."
+msgstr ""
+"karakters. De meeste zoekmachines gebruiken een maximum van %s karakters "
+"voor de %s."
+
+# @ learndash
+#: sfwd_module_class.php:562
+msgid "Click for Help!"
+msgstr "Klik hier voor hulp!"
+
+# @ learndash
+#: sfwd_module_class.php:688
+msgid "Options Reset."
+msgstr "Opties hersteld."
+
+# @ learndash
+#: sfwd_module_class.php:697
+msgid "Options Updated."
+msgstr "Opties gewijzigd."
+
+# @ learndash
+#: sfwd_module_class.php:748
+msgid "Update Options"
+msgstr "Update opties"
+
+# @ learndash
+#: sfwd_module_class.php:749
+#, php-format
+msgid "Reset %s Settings to Defaults"
+msgstr "Herstel %s instellingen naar standaard"
+
+# @ learndash
+#: tcpdf/config/tcpdf_config.php:41
+msgid "You are not allowed to access this file."
+msgstr "Je hebt geen toegang tot dit bestand."
+
+# @ learndash
+#: sfwd_lms.php:507
+msgid "Print Certificate"
+msgstr "Print certificaat"
+
+# @ learndash
+#: sfwd_lms.php:891
+msgid "Course Status:"
+msgstr "Status van de module:"
+
+# @ learndash
+#: sfwd_lms.php:910
+msgid "Complete Your Purchase"
+msgstr "Rond je aankoop af"
