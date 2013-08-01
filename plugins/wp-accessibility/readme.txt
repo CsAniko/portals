@@ -45,6 +45,21 @@ Translating my plug-ins is always appreciated. Visit <a href="http://translate.j
 
 == Changelog ==
 
+= 1.2.4.1=
+
+* Minor settings bug.
+
+= 1.2.4 =
+
+* Added diagnostic.css (beta) for admin users on front end and in post editor.
+* Bug fix in a11y.js; incorrect function call in scrollTo.
+* Bug fix in a11y.js; removed hook to # urls
+* Added visible logout link to admin to support users of voice activated controls.
+* Bug fix to built-in support request form.
+* Added filter wpa_move_toolbar to make it possible to attach a11y toolbar to something other than the body element.
+* Added French translation.
+
+
 = 1.2.3 =
 
 * Updated jQuery ScrollTo to version 1.4.5 to resolve JS conflict.
@@ -112,4 +127,4 @@ Even if WP Accessibility is running correctly, not all accessibility testing too
 
 == Upgrade Notice ==
 
-* Bug fix for custom skiplink target; Added focus outline option; Added color contrast tool.
+* 1.2.4: Added diagnostic CSS, visible logout link.

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wp-Pro-Quiz\n"
 "POT-Creation-Date: 2013-03-19 13:54+0100\n"
-"PO-Revision-Date: 2013-03-19 13:54+0100\n"
-"Last-Translator: Julius Fischer <julius.f@gmx.net>\n"
+"PO-Revision-Date: 2013-06-24 16:20+0100\n"
+"Last-Translator: \n"
 "Language-Team: Julius Fischer\n"
 "Language: German\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgstr ""
 
 #: lib/controller/WpProQuiz_Controller_Admin.php:110
 msgid "You must specify a name."
-msgstr ""
+msgstr "U dient eerst een naam in te voeren."
 
 #: lib/controller/WpProQuiz_Controller_Front.php:44
 #: lib/controller/WpProQuiz_Controller_Preview.php:15
@@ -126,7 +126,7 @@ msgstr "Quiz niet gevonden"
 
 #: lib/controller/WpProQuiz_Controller_Question.php:65
 msgid "questions copied"
-msgstr "Vragen gekopieërd"
+msgstr "Vragen gekopieÃ«rd"
 
 #: lib/controller/WpProQuiz_Controller_Question.php:147
 msgid "Edit question"
@@ -200,7 +200,7 @@ msgstr "Geen naam of e-mail ingevuld."
 
 #: lib/controller/WpProQuiz_Controller_Toplist.php:203
 msgid "Your name can not exceed 15 characters."
-msgstr "U naam mag niet langer zijn dan 15 tekens."
+msgstr "Uw naam mag niet langer zijn dan 15 tekens."
 
 #: lib/controller/WpProQuiz_Controller_Toplist.php:211
 msgid "You entered wrong captcha code."
@@ -220,7 +220,7 @@ msgstr "Bestand is niet compatibel met de huidige versie"
 
 #: lib/model/WpProQuiz_Model_GlobalSettingsMapper.php:47
 msgid "Wp-Pro-Quiz: One user completed a quiz"
-msgstr ""
+msgstr "Wp-Pro-Quiz: One user completed a quiz"
 
 #: lib/model/WpProQuiz_Model_GlobalSettingsMapper.php:48
 msgid ""
@@ -232,10 +232,17 @@ msgid ""
 "Result: $result\n"
 "\n"
 msgstr ""
+"Wp-Pro-Quiz\n"
+"\n"
+"De gebruiker \"$username\" heeft de cursus \"$quizname\" afgerond.\n"
+"\n"
+"Punten: $points\n"
+"Resultaat: $result\n"
+"\n"
 
 #: lib/plugin/WpProQuiz_Plugin_BpAchievementsV2.php:33
 msgid "The user completed a quiz."
-msgstr "De gebruiker heeft de quiz afgerond"
+msgstr "De gebruiker heeft de quiz afgerond."
 
 #: lib/view/WpProQuiz_View_AdminToplist.php:7
 #: lib/view/WpProQuiz_View_FrontToplist.php:8
@@ -283,7 +290,7 @@ msgstr "Oudste inschrijving"
 #: lib/view/WpProQuiz_View_AdminToplist.php:26
 #: lib/view/WpProQuiz_View_Statistics.php:169
 msgid "How many entries should be shown on one page:"
-msgstr "Hoeveel gebruikers wilt u weergeven op één pagina:"
+msgstr "Hoeveel gebruikers wilt u weergeven op Ã©Ã©n pagina:"
 
 #: lib/view/WpProQuiz_View_AdminToplist.php:38
 #: lib/view/WpProQuiz_View_AdminToplist.php:57
@@ -358,15 +365,15 @@ msgstr "Tijdslimiet"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:61
 msgid "Answered"
-msgstr ""
+msgstr "Answered"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:65
 msgid "Review"
-msgstr ""
+msgstr "Review"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:72
 msgid "Review question"
-msgstr ""
+msgstr "Review question"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:73
 #: lib/view/WpProQuiz_View_FrontQuiz.php:79
@@ -375,12 +382,12 @@ msgstr ""
 #: lib/view/WpProQuiz_View_QuizEdit.php:484
 #: lib/view/WpProQuiz_View_QuizEdit.php:489
 msgid "Quiz-summary"
-msgstr ""
+msgstr "Quiz-summary"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:81
 #, php-format
 msgid "%s of %s questions completed"
-msgstr ""
+msgstr "%s of %s questions completed"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:83
 #: lib/view/WpProQuiz_View_Import.php:44
@@ -391,7 +398,7 @@ msgstr "Vragen"
 #: lib/view/WpProQuiz_View_FrontQuiz.php:92
 #: lib/view/WpProQuiz_View_FrontQuiz.php:392
 msgid "Finish quiz"
-msgstr "Quiz beëindigen"
+msgstr "Quiz beÃ«indigen"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:99
 msgid "Start quiz"
@@ -491,7 +498,7 @@ msgstr "Hint"
 #: lib/view/WpProQuiz_View_QuizEdit.php:503
 #: lib/view/WpProQuiz_View_QuizEdit.php:508
 msgid "Skip question"
-msgstr ""
+msgstr "Skip question"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:371
 msgid "Back"
@@ -522,7 +529,7 @@ msgstr "Captcha"
 
 #: lib/view/WpProQuiz_View_FrontQuiz.php:456
 msgid "Send"
-msgstr ""
+msgstr "Send"
 
 #: lib/view/WpProQuiz_View_FrontToplist.php:11
 #, php-format
@@ -727,7 +734,7 @@ msgstr "Documentatie voor de opmaak van datum en tijd"
 #: lib/view/WpProQuiz_View_GobalSettings.php:200
 #: lib/view/WpProQuiz_View_GobalSettings.php:205
 msgid "Category management"
-msgstr ""
+msgstr "Category management"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:218
 #: lib/view/WpProQuiz_View_QuestionOverall.php:50
@@ -737,57 +744,59 @@ msgstr "Bewerken"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:233
 msgid "E-mail settings"
-msgstr ""
+msgstr "E-mail settings"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:239
 msgid "To:"
-msgstr ""
+msgstr "To:"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:246
 msgid ""
 "Separate multiple email addresses with a comma, e.g. wp@test.com, test@test."
 "com"
 msgstr ""
+"Separate multiple email addresses with a comma, e.g. wp@test.com, test@test."
+"com"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:252
 msgid "From:"
-msgstr ""
+msgstr "From:"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:265
 msgid "Subject:"
-msgstr ""
+msgstr "Subject:"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:275
 msgid "Message body:"
-msgstr ""
+msgstr "Message body:"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:283
 msgid "Allowed variables"
-msgstr ""
+msgstr "Allowed variables"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:285
 msgid "User-ID"
-msgstr ""
+msgstr "User-ID"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:286
 msgid "Username"
-msgstr ""
+msgstr "Username"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:287
 msgid "Quiz-Name"
-msgstr ""
+msgstr "Quiz-Name"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:288
 msgid "Result in precent"
-msgstr ""
+msgstr "Result in precent"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:289
 msgid "Reached points"
-msgstr ""
+msgstr "Reached points"
 
 #: lib/view/WpProQuiz_View_GobalSettings.php:290
 msgid "IP-address of the user"
-msgstr ""
+msgstr "IP-address of the user"
 
 #: lib/view/WpProQuiz_View_Import.php:21
 #: lib/view/WpProQuiz_View_QuizOverall.php:119
@@ -877,30 +886,32 @@ msgstr "Het aantal punten weergeven in het correct- en incorrect bericht?"
 #: lib/view/WpProQuiz_View_QuestionEdit.php:62
 #: lib/view/WpProQuiz_View_Statistics.php:82
 msgid "Category"
-msgstr ""
+msgstr "Category"
 
 #: lib/view/WpProQuiz_View_QuestionEdit.php:65
 msgid ""
 "You can assign classify category for a question. Categories are e.g. visible "
 "in statistics function."
 msgstr ""
+"You can assign classify category for a question. Categories are e.g. visible "
+"in statistics function."
 
 #: lib/view/WpProQuiz_View_QuestionEdit.php:68
 msgid "You can manage categories in global settings."
-msgstr ""
+msgstr "You can manage categories in global settings."
 
 #: lib/view/WpProQuiz_View_QuestionEdit.php:72
 #: lib/view/WpProQuiz_View_QuestionEdit.php:82
 msgid "Create new category"
-msgstr ""
+msgstr "Create new category"
 
 #: lib/view/WpProQuiz_View_QuestionEdit.php:73
 msgid "No category"
-msgstr ""
+msgstr "No category"
 
 #: lib/view/WpProQuiz_View_QuestionEdit.php:84
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 #: lib/view/WpProQuiz_View_QuestionEdit.php:100
 msgid "Message with the correct / incorrect answer"
@@ -1070,6 +1081,10 @@ msgid ""
 "{[play][love][hate]} soccer\" </span>. In this case answers play, love OR "
 "hate are correct."
 msgstr ""
+"You can specify multiple options for a search word. Enclose the word with "
+"[ ] e.g. <span style=\"font-style: normal; letter-spacing: 2px;\"> \"I "
+"{[play][love][hate]} soccer\" </span>. In this case answers play, love OR "
+"hate are correct."
 
 #: lib/view/WpProQuiz_View_QuestionEdit.php:400
 msgid ""
@@ -1108,19 +1123,19 @@ msgstr "Ordening opslaan"
 #: lib/view/WpProQuiz_View_QuestionOverall.php:83
 #: lib/view/WpProQuiz_View_QuestionOverall.php:88
 msgid "Copy questions from another Quiz"
-msgstr "Kopiëer vragen uit een andere Quiz"
+msgstr "KopiÃ«er vragen uit een andere Quiz"
 
 #: lib/view/WpProQuiz_View_QuestionOverall.php:89
 msgid ""
 "Here you can copy questions from another quiz into this quiz. (Multiple "
 "selection enabled)"
 msgstr ""
-"Hier kunt u vragen uit een andere quiz kopiëren naar deze quiz. (Meervoudige "
+"Hier kunt u vragen uit een andere quiz kopiÃ«ren naar deze quiz. (Meervoudige "
 "selectie ingeschakeld)"
 
 #: lib/view/WpProQuiz_View_QuestionOverall.php:101
 msgid "Copy questions"
-msgstr "Vragen kopieëren"
+msgstr "Vragen kopieÃ«ren"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:18
 msgid "Quiz title"
@@ -1402,23 +1417,27 @@ msgstr "Voorwaarden (Deze quiz moet afgemaakt worden)"
 #: lib/view/WpProQuiz_View_QuizEdit.php:455
 #: lib/view/WpProQuiz_View_QuizEdit.php:468
 msgid "Question overview"
-msgstr ""
+msgstr "Question overview"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:462
 msgid ""
 "Add at the top of the quiz a question overview, which allows easy "
 "navigation. Additional questions can be marked \"to review\"."
 msgstr ""
+"Add at the top of the quiz a question overview, which allows easy "
+"navigation. Additional questions can be marked \"to review\"."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:465
 msgid "Additional quiz overview will be displayed, before quiz is finished."
-msgstr ""
+msgstr "Additional quiz overview will be displayed, before quiz is finished."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:496
 msgid ""
 "If you enalbe this option, no quiz overview will be displayed, before "
 "finishing quiz."
 msgstr ""
+"If you enalbe this option, no quiz overview will be displayed, before "
+"finishing quiz."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:515
 msgid ""
@@ -1426,41 +1445,46 @@ msgid ""
 "\"Overview -> next\" mode). User still will be able to navigate over "
 "\"Question-Overview\""
 msgstr ""
+"If you enable this option, user won't be able to skip question. (only in "
+"\"Overview -> next\" mode). User still will be able to navigate over "
+"\"Question-Overview\""
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:522
 #: lib/view/WpProQuiz_View_QuizEdit.php:527
 msgid "E-mail notification"
-msgstr ""
+msgstr "E-mail notification"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:535
 msgid "for registered users only"
-msgstr ""
+msgstr "for registered users only"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:539
 msgid "for all users"
-msgstr ""
+msgstr "for all users"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:542
 msgid ""
 "If you enable this option, you will be informed if a user completes this "
 "quiz."
 msgstr ""
+"If you enable this option, you will be informed if a user completes this "
+"quiz."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:545
 msgid "E-Mail settings can be edited in global settings."
-msgstr ""
+msgstr "E-Mail settings can be edited in global settings."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:555
 msgid "Quiz-Mode"
-msgstr ""
+msgstr "Quiz-Mode"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:560
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:561
 msgid "Normal + Back-Button"
-msgstr ""
+msgstr "Normal + Back-Button"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:562
 msgid "Check -> continue"
@@ -1475,20 +1499,24 @@ msgid ""
 "Displays all questions sequentially, \"right\" or \"false\" will be "
 "displayed at the end of the quiz."
 msgstr ""
+"Displays all questions sequentially, \"right\" or \"false\" will be "
+"displayed at the end of the quiz."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:578
 msgid "Allows to use the back button in a question."
-msgstr ""
+msgstr "Allows to use the back button in a question."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:581
 msgid "Shows \"right or wrong\" after each question."
-msgstr ""
+msgstr "Shows \"right or wrong\" after each question."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:584
 msgid ""
 "If this option is activated, all answers are displayed below each other, i."
 "e. all questions are on a single page."
 msgstr ""
+"If this option is activated, all answers are displayed below each other, i."
+"e. all questions are on a single page."
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:629
 msgid ""
@@ -1516,13 +1544,15 @@ msgstr ""
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:671
 msgid "insert automatically"
-msgstr ""
+msgstr "insert automatically"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:679
 msgid ""
 "If you enable this option, logged in users will be automatically entered "
 "into leaderboard"
 msgstr ""
+"If you enable this option, logged in users will be automatically entered "
+"into leaderboard"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:685
 msgid "display captcha"
@@ -1546,7 +1576,7 @@ msgstr "Plugin is gevonden"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:705
 msgid "Plugin is not installed."
-msgstr "Plugin is niet geïnstalleerd"
+msgstr "Plugin is niet geÃ¯nstalleerd"
 
 #: lib/view/WpProQuiz_View_QuizEdit.php:713
 msgid "Sort list by"
@@ -1753,7 +1783,7 @@ msgstr "Activeer statistieken"
 
 #: lib/view/WpProQuiz_View_Statistics.php:34
 msgid "Users"
-msgstr ""
+msgstr "Users"
 
 #: lib/view/WpProQuiz_View_Statistics.php:35
 msgid "Overview"
@@ -1765,7 +1795,7 @@ msgstr "Selecteer een gebruikersnaam:"
 
 #: lib/view/WpProQuiz_View_Statistics.php:51
 msgid "Anonymous user"
-msgstr ""
+msgstr "Anonymous user"
 
 #: lib/view/WpProQuiz_View_Statistics.php:67
 #: lib/view/WpProQuiz_View_Statistics.php:192
@@ -1778,7 +1808,7 @@ msgstr "Punten gescoord"
 
 #: lib/view/WpProQuiz_View_Statistics.php:105
 msgid "Sub-Total: "
-msgstr ""
+msgstr "Sub-Total: "
 
 #: lib/view/WpProQuiz_View_Statistics.php:139
 msgid "Reset statistics"
@@ -1938,7 +1968,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "Statistics reset"
-#~ msgstr "Statistik zurücksetzen"
+#~ msgstr "Statistik zurÃ¼cksetzen"
 
 #~ msgid "Not all fields are filled"
-#~ msgstr "Nicht alle Felder ausgefüllt"
+#~ msgstr "Nicht alle Felder ausgefÃ¼llt"

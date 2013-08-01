@@ -114,13 +114,13 @@ class WpProQuiz_View_QuizOverall extends WpProQuiz_View_View {
 	<p>
 		<?php if(current_user_can('wpProQuiz_add_quiz')) { ?>
 		<a class="button-secondary" href="admin.php?page=ldAdvQuiz&action=add"><?php echo __('Add quiz', 'wp-pro-quiz'); ?></a>
-		<?php } /*if(current_user_can('wpProQuiz_import')) { ?>
+		<?php } if(current_user_can('wpProQuiz_import')) { ?>
 		<a class="button-secondary wpProQuiz_import" href="#"><?php echo __('Import', 'wp-pro-quiz'); ?></a>
 		<?php } if(current_user_can('wpProQuiz_export') && count($this->quiz)) { ?>
 		<a class="button-secondary wpProQuiz_export" href="#"><?php echo __('Export', 'wp-pro-quiz'); ?></a>
-		<?php } */?>
+		<?php } ?>
 	</p>
-	<?php /*
+	
 	<div class="wpProQuiz_exportList">
 		<form action="admin.php?page=ldAdvQuiz&module=importExport&action=export&noheader=true" method="POST">
 			<h3 style="margin-top: 0;"><?php _e('Export', 'wp-pro-quiz'); ?></h3>
@@ -147,7 +147,6 @@ class WpProQuiz_View_QuizOverall extends WpProQuiz_View_View {
 			<input class="button-primary" name="exportStart" id="exportStart" value="<?php echo __('Start import', 'wp-pro-quiz'); ?>" type="submit">
 		</form>
 	</div>
-	*/ ?>
 </div>
 		
 		<?php 

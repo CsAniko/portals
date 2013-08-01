@@ -1,7 +1,8 @@
 <?php
 class WpProQuiz_Model_PrerequisiteMapper extends WpProQuiz_Model_Mapper {
 	public function delete($prerequisiteQuizId) {
-		return $this->_wpdb->delete(
+		global $wpdb;
+		return $wpdb->delete(
 			$this->_tablePrerequisite, 
 			array('prerequisite_quiz_id' => $prerequisiteQuizId), 
 			array('%d')

@@ -113,5 +113,17 @@ function childtheme_doctitle() {
 // Add the filter to the original function
 add_filter('thematic_doctitle', 'childtheme_doctitle');
 
+/**
+ * Get site url for links 
+ *
+ * @author WPSnacks.com
+ * @link http://www.wpsnacks.com
+ */
+function url_shortcode() {
+return get_bloginfo('url');
+}
+add_shortcode('url','url_shortcode');
+
+
 
 ?>

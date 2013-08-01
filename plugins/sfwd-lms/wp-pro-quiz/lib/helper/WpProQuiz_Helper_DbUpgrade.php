@@ -90,7 +90,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			  `skip_question_disabled` tinyint(1) NOT NULL,
 			  `email_notification` tinyint(3) unsigned NOT NULL,
 			  PRIMARY KEY (`id`)
-			) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+			)   DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('
@@ -114,7 +114,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			  PRIMARY KEY (`id`),
 			  KEY `quiz_id` (`quiz_id`),
 			  KEY `category_id` (`category_id`)
-			) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+			)   DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('
@@ -125,7 +125,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			  `lock_type` tinyint(3) unsigned NOT NULL,
 			  `lock_date` int(11) NOT NULL,
 			  PRIMARY KEY (`quiz_id`,`lock_ip`,`user_id`,`lock_type`)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+			)  DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('
@@ -138,7 +138,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			  `hint_count` int(10) unsigned NOT NULL,
 			  `points` int(10) unsigned NOT NULL,
 			  PRIMARY KEY (`quiz_id`,`question_id`,`user_id`)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+			)  DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('
@@ -146,7 +146,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			  `prerequisite_quiz_id` int(11) NOT NULL,
 			  `quiz_id` int(11) NOT NULL,
 			  PRIMARY KEY (`prerequisite_quiz_id`,`quiz_id`)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+			)  DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('
@@ -161,7 +161,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			  `result` float unsigned NOT NULL,
 			  `ip` varchar(100) NOT NULL,
 			  PRIMARY KEY (`toplist_id`,`quiz_id`)
-			) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+			)   DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('
@@ -169,7 +169,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			  `category_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 			  `category_name` varchar(200) NOT NULL,
 			  PRIMARY KEY (`category_id`)
-			) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+			)   DEFAULT CHARSET=utf8;
 		');
 	}
 	
@@ -210,7 +210,7 @@ class WpProQuiz_Helper_DbUpgrade {
 				`lock_ip` varchar(100) NOT NULL,
 				`lock_date` int(11) NOT NULL,
 				PRIMARY KEY (`quiz_id`,`lock_ip`)
-			) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+			)  DEFAULT CHARSET=latin1;
 		');
 		
 		$this->_wpdb->query('
@@ -393,7 +393,7 @@ class WpProQuiz_Helper_DbUpgrade {
 				  `incorrect_count` int(10) unsigned NOT NULL,
 				  `hint_count` int(10) unsigned NOT NULL,
 				  PRIMARY KEY (`quiz_id`,`question_id`,`user_id`)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+			)  DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('
@@ -522,7 +522,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			 	`prerequisite_quiz_id` int(11) NOT NULL, 
 			 	`quiz_id` int(11) NOT NULL, 
 			  	PRIMARY KEY (`prerequisite_quiz_id`,`quiz_id`) 
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+			)  DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('
@@ -537,7 +537,7 @@ class WpProQuiz_Helper_DbUpgrade {
 				  `result` float unsigned NOT NULL,
 				  `ip` varchar(100) NOT NULL,
 				  PRIMARY KEY (`toplist_id`,`quiz_id`)
-			) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+			)   DEFAULT CHARSET=utf8;
 		');
 		
 		
@@ -702,7 +702,7 @@ class WpProQuiz_Helper_DbUpgrade {
 			  `category_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 			  `category_name` varchar(200) NOT NULL,
 			  PRIMARY KEY (`category_id`)
-			) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+			)   DEFAULT CHARSET=utf8;
 		');
 		
 		$this->_wpdb->query('

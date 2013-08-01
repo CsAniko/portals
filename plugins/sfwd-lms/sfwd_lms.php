@@ -3,7 +3,7 @@
 Plugin Name: LearnDash LMS
 Plugin URI: http://www.learndash.com
 Description: LearnDash LMS Plugin - Turn your WordPress site into a learning management system.
-Version: 1.3.5
+Version: 1.3.7
 Author: LearnDash
 Author URI: http://www.learndash.com
 */
@@ -13,6 +13,9 @@ require_once(dirname(__FILE__).'/course_progress.php');
 require_once(dirname(__FILE__).'/course_list_shortcode.php');
 require_once(dirname(__FILE__).'/course_info_widget.php');
 require_once(dirname(__FILE__).'/quiz_pro.php');
+require_once(dirname(__FILE__).'/sfwd_editor.php');
+require_once(dirname(__FILE__).'/assignment_uploads.php');
+
 
 function sfwd_lms_has_access( $post_id ) {
 	if ( current_user_can( 'level_8' ) ) return true;
@@ -87,6 +90,7 @@ if ( !class_exists( 'SFWD_LMS' ) ) {
 				set_transient( 'sfwd_cpt_rewrite_flush', false );
 			}
 		}
+		
  		function add_tag_init()
  		{
 				$tag_args = array(
@@ -215,6 +219,13 @@ if ( !class_exists( 'SFWD_LMS' ) ) {
 					      'type' => 'text',
 					      'help_text' => __('Options for course price', 'learndash'),
 					    ),
+						'course_join' => 
+					    Array(
+					      'name' => __('Course Join Button', 'learndash'),
+					      'type' => 'checkbox',
+						  'default' => '',
+					      'help_text' => __('Show a Join button to start taking the course. This is applicable only for free courses.', 'learndash'),
+					    ),
 						'course_access_list' => Array(
 						  'name' => __('Course Access List', 'learndash'),
 						  'type' => 'textarea',
@@ -243,6 +254,7 @@ if ( !class_exists( 'SFWD_LMS' ) ) {
 							'default' => '',
 							'help_text' => __('Choose the sort order of lessons in this course.', 'learndash')
 							),
+						'course_prerequisite' => Array( 'name' => __('Course prerequities', 'learndash'), 'type' => 'select', 'help_text' => __('Select a course as prerequities to view this course', 'learndash'), 'initial_options' => '' , 'default' => ''),						
 						'course_disable_lesson_progression' => Array( 
 							'name' => __('Disable Lesson Progression', 'learndash'),
 							'type' => 'checkbox',
@@ -297,6 +309,7 @@ if ( !class_exists( 'SFWD_LMS' ) ) {
 					  'cpt_options' => Array( 'supports' => array ( 'title', 'thumbnail', 'editor', 'page-attributes' , 'author', 'comments', 'revisions') ),
 					  'fields' => Array(
 							'forced_lesson_time' => Array( 'name' => __('Forced Lesson Timer', 'learndash'), 'type' => 'text', 'help_text' => __('Minimum time a user has to spend on Lesson page before it can be marked complete. Examples: 40 (for 40 seconds), 20s, 45sec, 2m 30s, 2min 30sec, 1h 5m 10s, 1hr 5min 10sec', 'learndash'), 'default' => '' ),		
+							'lesson_assignment_upload' => Array( 'name' => __('Upload Assignment', 'learndash'), 'type' => 'checkbox', 'help_text' => __('Check this if you want to make it mandatory to upload assignment', 'learndash'), 'default' => 0 ),
 							),
 					  'default_options' => Array(
 												'orderby' => Array( 
@@ -426,7 +439,7 @@ if ( !class_exists( 'SFWD_LMS' ) ) {
 					  'template_redirect' => false,
 					  'fields' => Array(),
 					  'default_options' => $cert_defaults,
-					  'cpt_options' => Array( 'exclude_from_search' => true, 'has_archive' => false )
+					  'cpt_options' => Array( 'exclude_from_search' => true, 'has_archive' => false, 'hierarchical' => 'false', 'supports' => array ( 'title', 'editor', 'thumbnail' , 'author',  'revisions') )
 					);
 					
 			if ( current_user_can( 'level_8' ) ) {
@@ -454,7 +467,11 @@ if ( !class_exists( 'SFWD_LMS' ) ) {
 			$sfwd_quiz = $this->post_types['sfwd-quiz'];
 			$quiz_prefix = $sfwd_quiz->get_prefix();
 			add_filter( "{$quiz_prefix}display_settings", Array( $this, "quiz_display_settings" ), 10, 3 );
+			$sfwd_courses = $this->post_types['sfwd-courses'];
+			$courses_prefix = $sfwd_courses->get_prefix();
+			add_filter( "{$courses_prefix}display_settings", Array( $this, "course_display_settings" ), 10, 3 );
 		}
+		
 		
 		function show_course_info( $user ) {
 			$user_id = $user->ID;
@@ -708,9 +725,36 @@ if ( !class_exists( 'SFWD_LMS' ) ) {
 					if ( !empty( $posts ) )
 						foreach( $posts as $p )
 							$post_array[$p->ID] = $p->post_title;
+					
 					$settings["{$quiz_prefix}certificate"]['initial_options'] = $post_array;
 				}
 			}
+			return $settings;
+		}
+		
+		function course_display_settings( $settings ) {
+		/*
+			@Description:
+			Function to display course prerequisite list
+			Select from given list of course to make it mandatory to access
+			the current course
+		*/
+			global $sfwd_lms;
+			$sfwd_courses = $sfwd_lms->post_types['sfwd-courses'];
+		    $courses_prefix = $sfwd_courses->get_prefix();
+			if ( !empty( $settings["{$courses_prefix}course_prerequisite"] ) ) {
+					$posts = get_posts( Array( 'post_type' => 'sfwd-courses'  , 'numberposts' => -1) );
+					$post_array = Array( '' => __('-- Select A Course --', 'learndash') );
+					if ( !empty( $posts ) )
+						foreach( $posts as $p )
+							if($p->ID == get_the_id()){ 
+							//Skip for current post id as current course can not be prerequities of itself
+							}
+							else $post_array[$p->ID] = $p->post_title;
+					
+					$settings["{$courses_prefix}course_prerequisite"]['initial_options'] = $post_array;
+			}
+			
 			return $settings;
 		}
 
@@ -854,9 +898,10 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 			}
 		}
 		
+		
 		function template_content( $content ) {
 			global $wp;
-		    //global $post;
+		    //global $post;$meta = $this->get_settings_values( 'sfwd-courses' );
 			$post = get_post(get_the_id());
 			$current_user = wp_get_current_user();
 			$post_type = '';
@@ -869,10 +914,11 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 			if ( !empty( $wp->query_vars["name"]) ) {
 				//$content = "[learndash_course_progress]<br>".$content; /* To add course progress in course related pages */
 				// single
+				if(is_course_prerequities_completed($post->ID)){
 				if ( $this->post_type == 'sfwd-courses' ) {
-				
+					
 					include_once('enhanced-paypal-shortcodes.php');
-					$meta = $this->get_settings_values( 'sfwd-courses' );
+					
 					$courses_prefix = $this->get_prefix();
 					$prefix_len = strlen( $courses_prefix );
 
@@ -885,7 +931,7 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 					    }
 					}
 					extract($courses_options);
-
+					
 					//if(empty($meta['sfwd-courses_course_disable_lesson_progression']['value']) && !empty($current_user->ID))
 					if(!empty($current_user->ID))
 					$content = "<span id='learndash_course_status'><b>" . __('Course Status:', 'learndash') . "</b> ".learndash_course_status($post->ID, null).'<br></span><br>'.$content;
@@ -902,8 +948,10 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 					if ( !empty( $course_access_list ) ) $course_access_list = explode( ',', $course_access_list );
 					else $course_access_list = Array();
 					$user_id = get_current_user_id();
-					if ( !current_user_can('level_8') && !in_array( $user_id, $course_access_list ) && !empty( $course_price ) ) {
+
+					if ( !current_user_can('level_8') && !in_array( $user_id, $course_access_list ) && !(empty( $course_price ) && empty($course_join))) {
 					
+						if(!empty( $course_price )) {
 						$paypal_button = '';
 						if ( !empty( $paypal_email ) ) {
 					//		if ( empty( $paypal_notifyurl ) ) $paypal_notifyurl = $this->plugin_path['url'] . "/ipn.php";
@@ -920,13 +968,18 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 						 $payment_buttons = __('The buyer PayPal email is empty; please configure this in the plugin or use alternative payment gateway.', 'learndash');
 						 
 						 $content .= '<div class="learndash_checkout_buttons">'.$payment_buttons.'</div>';
-						 
-						 
+						 }
+						 else
+						 {
+							$content .= '<div class="learndash_join_button"><form method="post">
+											<input type="hidden" value="'.$post->ID.'" name="course_id">
+											<input type="submit" value="'.__("Join", "learndash").'" name="course_join">
+										</form></div>';
+						 }
 					} else {
-						if ( !empty( $meta ) && !empty( $meta[ $this->prefix . 'course_materials' ] ) && !empty( $meta[ $this->prefix . 'course_materials' ]['value'] ) ) {
-							$materials = $meta[ $this->prefix . 'course_materials' ]['value'];
-							$materials = wp_kses_post( wp_specialchars_decode( $materials, ENT_QUOTES ) );
-							$content .= "<h2>{$meta[ $this->prefix . 'course_materials' ]['name']}</h2>\n<p>{$materials}</p>\n";
+						if ( !empty( $course_materials ) ) {
+							$materials = wp_kses_post( wp_specialchars_decode( $course_materials, ENT_QUOTES ) );
+							$content .= "<div id='learndash_course_materials'><h2>".__('Course Materials', 'learndash')."</h2>\n<p>{$materials}</p></div>\n";
 						}
 						$terms = wp_get_post_terms( $post->ID, 'courses' );
 
@@ -949,7 +1002,8 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 							$content .= "<p id='learndash_quizzes'><b>" . __('Quizzes', 'learndash') . "</b></p><p>$quizzes</p>";
 						}
 					}
-				} elseif ( $this->post_type == 'sfwd-quiz' ) {
+				}
+				 elseif ( $this->post_type == 'sfwd-quiz' ) {
 					$meta = @$this->get_settings_values( 'sfwd-quiz' );
 					$count = 0;
 					$repeats = null;
@@ -969,7 +1023,7 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 					}
 
 					if(learndash_lesson_progression_enabled() && !is_quiz_accessable(null, $post))
-					$content = __('Please go back and complete the previous lesson.<br>', 'learndash');
+						$content = __('Please go back and complete the previous lesson.<br>', 'learndash');
 					else
 					if ( ( $repeats === null ) || ( $repeats >= $count ) ) {
 						if(!empty($meta['sfwd-quiz_quiz_pro']['value']))
@@ -1009,15 +1063,40 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 					if(!empty($quizids))
 					$quiz_notcomplete = learndash_is_quiz_notcomplete(null, $quizids);
 					
+					if(lesson_hasassignments($post)) {
+						if(current_user_can('manage_options'))
+						$content .= '<br><div id="learndash_assignments_list">'.learndash_show_assignments_list($post).'</div><br><br>';
+						
+						
+						$content .= "<div id='learndash_uploaded_assignments'>
+						".learndash_get_uploaded_assignments($post)."
+						</div>
+						<br/>";
+					}
+					
 					if(empty($quiz_notcomplete))
 					$content .= "<br>".learndash_mark_complete($post);
 					$content .= "<br><p id='learndash_next_prev_link'>".learndash_previous_post_link()."&nbsp;&nbsp;&nbsp;&nbsp;  ".learndash_next_post_link()."</p>";
 				}
-			} else {
+				else {
 				// archive
 				$content = $this->get_archive_content( $content );
+				}
 			}
-			
+			else{
+					//$meta = $this->get_settings_values( 'sfwd-courses' );
+					if($this->post_type == 'sfwd-courses') $content_type = 'course';
+					elseif($this->post_type == 'sfwd-lessons') $content_type = 'lesson';
+					elseif($this->post_type == 'sfwd-quiz') $content_type = 'quiz';
+					$id = $post->ID;
+					$id = learndash_get_course_id($id);
+					$post_options = get_post_meta( $id, '_sfwd-courses', true ); 
+					$course_pre = isset($post_options['sfwd-courses_course_prerequisite'])? $post_options['sfwd-courses_course_prerequisite']:0;
+					$course_title = get_the_title($course_pre);
+					$course_link = get_permalink( $course_pre );
+					$content = "<div id='learndash_complete_prerequisites'>".sprintf(__('To take this %s, you need to complete the following course first:%s', 'learndash'), $content_type,'<br><a href="'.$course_link.'">'.$course_title.'</a>')."</div>";	
+				}
+			} 
 			return '<div class="learndash">'.$content.'</div>';
 		}
 		
@@ -1046,6 +1125,7 @@ if ( !class_exists( 'SFWD_CPT_Instance' ) ) {
 				}
 					// archive
 			}
+			
 			
 			if ( ( $this->post_type == 'sfwd-quiz' ) && ( $post_type == 'sfwd-certificates' ) ) {
 				global $post;
@@ -1188,15 +1268,15 @@ if ( !class_exists( 'SFWD_SlickQuiz' ) ) {
             // Make sure dynamic quiz scripts gets loaded below jQuery
             add_filter( 'wp_footer', array( &$this, 'load_quiz_script' ), 5000 );
 
-	    add_action( 'wp_ajax_create_quiz', array( &$this, 'create_quiz' ) );
+			add_action( 'wp_ajax_create_quiz', array( &$this, 'create_quiz' ) );
             add_action( 'wp_ajax_update_quiz', array( &$this, 'update_quiz' ) );
             add_action( 'wp_ajax_revert_quiz', array( &$this, 'revert_quiz' ) );
             add_action( 'wp_ajax_publish_quiz', array( &$this, 'publish_quiz' ) );
             add_action( 'wp_ajax_unpublish_quiz', array( &$this, 'unpublish_quiz' ) );
             add_action( 'wp_ajax_delete_quiz', array( &$this, 'delete_quiz' ) );
             add_action( 'wp_ajax_finish_quiz', array( &$this, 'finish_quiz' ) );
-
         }
+		
 
         function create_quiz() {
             if ( isset( $_POST['json'] ) ) {
@@ -1635,6 +1715,7 @@ function learndash_previous_post_link($prevlink='', $url = false) {
 		
 }
 
+
 function learndash_next_post_link($prevlink='', $url = false) {
 	global $post;
 	
@@ -1667,11 +1748,13 @@ function learndash_next_post_link($prevlink='', $url = false) {
 		
 }
 
-function learndash_clear_prev_next_links($prevlink=''){
-	global $post;
-	
-	if(!is_singular() || empty($post) || $post->post_type != "sfwd-lessons")
-		return "";
+function learndash_clear_prev_next_links($prevlink=''){ 
+global $post;
+
+if(!is_singular() || empty($post) || $post->post_type != "sfwd-lessons") 
+return $prevlink; 
+else 
+return ""; 
 }
 add_filter('previous_post_link', 'learndash_clear_prev_next_links', 1, 2);
 add_filter('next_post_link', 'learndash_clear_prev_next_links', 1, 2);
@@ -1890,11 +1973,48 @@ function ld_update_course_access($user_id, $course_id) {
 	
 	$meta['sfwd-courses_course_access_list'] = $access_list;
 	update_post_meta( $course_id, '_sfwd-courses', $meta );
+	do_action("learndash_update_course_access", $user_id, $course_id, $access_list);
 	return $meta;
 }
 // Load the auto-update class
 add_action('init', 'nss_plugin_updater_activate_sfwd_lms');
+//initiate the function if MySql version > 5
+add_action('init', 'mysql_5_hack');
 
+/* Function mysql_5_hack()
+*	Refer to bug http://core.trac.wordpress.org/ticket/2115
+*	Sql "Default NULL check" in version 5(strict mode)
+*	Function to disable null checks
+*/
+function mysql_5_hack() {
+global $wpdb;
+$sqlVersion = $wpdb->get_var("select @@version");
+if ( $sqlVersion{0} == 5 ) $wpdb->query('set sql_mode="";'); //set "Strict" mode off 
+}
+
+function is_course_prerequities_completed($id){
+/*
+  Returns True if prerequities is completed or does not exists, False otherwise
+*/
+			global $wp;
+			$current_user = wp_get_current_user();
+			$course_pre = learndash_get_course_prerequisite($id);
+			if(!empty($course_pre)){ 
+					//Now check if the prerequities course is completed by user or not
+					$course_status = learndash_course_status($course_pre, null);
+					if($course_status=='Completed') return true;
+					else return false;
+			}
+			else{
+					return true;
+			}
+}
+function learndash_get_course_prerequisite($id) {
+	$id = learndash_get_course_id($id);
+	$post_options = get_post_meta( $id, '_sfwd-courses', true ); 
+	$course_pre = isset($post_options['sfwd-courses_course_prerequisite'])? $post_options['sfwd-courses_course_prerequisite']:0;
+	return $course_pre;			
+}	
 function learndash_certificate_details($post_id, $user_id = null) {
 		$user_id = !empty($user_id)? $user_id:get_current_user_id();
 		
@@ -1992,3 +2112,22 @@ function nss_plugin_updater_activate_sfwd_lms()
 		ini_set('error_log', $original_error_log);		
 	}
 	}
+	
+	function learndash_process_course_join(){
+		if(!isset($_POST['course_join']) || !isset($_POST['course_id']))
+			return;
+			
+		$user_id = get_current_user_id();
+		if(empty($user_id)) {
+			wp_redirect(wp_login_url());
+			exit;
+		}
+		
+		$course_id = $_POST['course_id'];
+		$meta = get_post_meta( $course_id, '_sfwd-courses', true );
+
+		if(!empty($meta['sfwd-courses_course_join']) && empty($meta['sfwd-courses_course_price']))
+			ld_update_course_access($user_id, $course_id);
+		
+	}
+	add_action("wp", "learndash_process_course_join");

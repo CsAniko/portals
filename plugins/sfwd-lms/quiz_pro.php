@@ -36,6 +36,8 @@ class LD_QuizPro {
 		$score = $_REQUEST['results']['comp']['correctQuestions'];
 		$points = $_REQUEST['results']['comp']['points'];
 		$result = $_REQUEST['results']['comp']['result'];
+		$timespent = isset($_POST['timespent'])? $_POST['timespent']:null;
+
 		
 		$question = new WpProQuiz_Model_QuestionMapper();
 		$questions = $question->fetchAll($quiz_id);
@@ -69,8 +71,8 @@ class LD_QuizPro {
 		$quiz = get_post_meta($ld_quiz_id, '_sfwd-quiz', true);
 		$passingpercentage = intVal($quiz['sfwd-quiz_passingpercentage']);
 		$pass = ($result >= $passingpercentage)? 1:0;
-		$this->debug(Array( "quiz" => $ld_quiz_id, "score" => $score, "count" => $total_points, "pass" => $pass, "rank" => '-', "time" => time() , 'pro_quizid' => $quiz_id));
-		$quizdata = Array( "quiz" => $ld_quiz_id, "score" => $score, "count" => $count, "pass" => $pass, "rank" => '-', "time" => time(), 'pro_quizid' => $quiz_id, 'points' => $points, 'total_points' => $total_points, 'percentage' => $result);
+		$this->debug(array( "quiz" => $ld_quiz_id, "score" => $score, "count" => $total_points, "pass" => $pass, "rank" => '-', "time" => time() , 'pro_quizid' => $quiz_id));
+		$quizdata = array( "quiz" => $ld_quiz_id, "score" => $score, "count" => $count, "pass" => $pass, "rank" => '-', "time" => time(), 'pro_quizid' => $quiz_id, 'points' => $points, 'total_points' => $total_points, 'percentage' => $result, 'timespent' => $timespent);
 		$usermeta[] = $quizdata;
 
 		$quizdata['quiz'] = get_post($ld_quiz_id);

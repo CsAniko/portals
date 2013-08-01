@@ -97,6 +97,8 @@ a:hover {
 #topbar a {display:block;}
 #utaustin {background:url(images/utlogo.png) 0px 7px no-repeat;height:42px;width:301px;}
 #cns {background:url(images/cns.gif) 0px 10px no-repeat;height:42px;width:200px;float:right;}
+#hseas {background:url(images/seas.png) 0px 7px no-repeat;height:42px;width:301px;}
+#mazur {background:url(images/mazur.gif) 0px 10px no-repeat;height:42px;width:200px;float:right;}
 
 #branding {
     padding:6px ;

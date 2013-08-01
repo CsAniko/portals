@@ -6,6 +6,19 @@ Originally by Redcocker 2012/3/5
 License: GPL v2
 http://www.near-mint.com/blog/
 */
+
+if ( !function_exists( 'get_thumb_path' ) ) {
+	function get_thumb_path($post_id){
+		$thumbnail_id = get_post_meta( $post_id, '_thumbnail_id', true );
+		if ($thumbnail_id){
+			$img_path = get_post_meta( $thumbnail_id, '_wp_attached_file', true );
+			$upload_url = wp_upload_dir();
+			$img_full_path = $upload_url['baseurl'].'/'.$img_path;
+			return $img_full_path;
+		}
+	}
+}
+
 if ( !function_exists( 'post2pdf_conv_post_to_pdf' ) ) {
 	function post2pdf_conv_post_to_pdf() {
         // Callback for image align center
@@ -386,6 +399,7 @@ if ( !function_exists( 'post2pdf_conv_post_to_pdf' ) ) {
 		$content = preg_replace("/<script[^>]*?type=['\"]syntaxhighlighter['\"][^>]*?>(.*?)<\/script>/is", "<pre style=\"word-wrap:break-word; color: #406040; background-color: #F1F1F1; border: 1px solid #9F9F9F;\">$1</pre>", $content);
 		$content = preg_replace("/<pre[^>]*?name=['\"]code['\"][^>]*?>(.*?)<\/pre>/is", "<pre style=\"word-wrap:break-word; color: #406040; background-color: #F1F1F1; border: 1px solid #9F9F9F;\">$1</pre>", $content);
 		$content = preg_replace("/<textarea[^>]*?name=['\"]code['\"][^>]*?>(.*?)<\/textarea>/is", "<pre style=\"word-wrap:break-word; color: #406040; background-color: #F1F1F1; border: 1px solid #9F9F9F;\">$1</pre>", $content);
+		$content = preg_replace('/\n/',"<br/>",$content); //"\n" should be treated as a next line
 		// For WP-SynHighlight(GeSHi)
 		if (function_exists('wp_synhighlight_settings')) {
 			$content = preg_replace("/<pre[^>]*?class=['\"][^>]*?>(.*?)<\/pre>/is", "<pre style=\"word-wrap:break-word; color: #406040; background-color: #F1F1F1; border: 1px solid #9F9F9F;\">$1</pre>", $content);
@@ -398,17 +412,42 @@ if ( !function_exists( 'post2pdf_conv_post_to_pdf' ) ) {
 
 		// Combine title with content
 			$formatted_title = '<h1 style="text-align:center;">' . $title . '</h1>';
-			$formatted_post = $formatted_title . '<br/><br/>' . $content;
+			//$formatted_post = $formatted_title . '<br/><br/>' . $content;    (Title will not appear on PDF)
+			$formatted_post = '<br/><br/>' . $content;
 
 			$formatted_post = preg_replace('/(<[^>]*?font-family[^:]*?:)([^;]*?;[^>]*?>)/is', "$1".$font.",$2", $formatted_post);
 
+			// get featured image
+			$postid = get_the_id(); //Get current post id
+			$img_file = get_thumb_path($postid); //The same function from theme's[twentytwelve here] function.php
+		
+			//Only print image if it exists
+			if($img_file != ''){
+				//Print BG image
+				$pdf->setPrintHeader(false);
+				// get the current page break margin
+				$bMargin = $pdf->getBreakMargin();
+				// get current auto-page-break mode
+				$auto_page_break = $pdf->getAutoPageBreak();
+				// disable auto-page-break
+				$pdf->SetAutoPageBreak(false, 0);
+				// Get width and height of page for dynamic adjustments
+				$pageH = $pdf->getPageHeight();
+				$pageW = $pdf->getPageWidth();
+				//Print the Background
+				$pdf->Image($img_file, $x = '0', $y = '0', $w = $pageW, $h = $pageH, $type = '', $link = '', $align = '', $resize = false, $dpi = 300, $palign = '', $ismask = false, $imgmask = false, $border = 0, $fitbox = false, $hidden = false, $fitonpage = false, $alt = false, $altimgs = array() );
+				// restore auto-page-break status
+				$pdf->SetAutoPageBreak($auto_page_break, $bMargin);
+				// set the starting point for the page content
+				$pdf->setPageMark();
+			}	
 
-		// Print post
-		$pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $formatted_post, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
+			// Print post
+			$pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $formatted_post, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
 
 		// Set background
 		$pdf->SetFillColor(255, 255, 127);
-		$pdf->setCellPaddings(5, 5, 0, 0);
+		$pdf->setCellPaddings(0, 0, 0, 0);
 
 		// Print signature
 

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* CSS Document */
+#topbar {overflow:hidden;width:960px;margin:0 auto;}
+#topbar a {display:block;}
+
+#photos {
+   /* Prevent vertical gaps */
+   line-height: 0;
+   
+   -webkit-column-count: 4;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    4;
+   -moz-column-gap:      0px;
+   column-count:         4;
+   column-gap:           0px;
+}
+
+#utaustin {background:url(images/utlogo.png) no-repeat;height:42px;width:301px;}
+#cns {background:url(images/cns.gif) no-repeat;height:42px;width:200px;}
+#hseas {background:url(images/seas.png) no-repeat;height:42px;width:301px;}
+#mazur {background:url(images/mazur.gif) no-repeat;height:42px;width:200px;}
+

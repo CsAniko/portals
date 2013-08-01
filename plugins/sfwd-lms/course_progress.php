@@ -1,7 +1,8 @@
 <?php
 
-
 function learndash_mark_complete($post) {
+	$current_user = wp_get_current_user(); 
+	$userid = $current_user->ID;
 	if(isset($_POST['sfwd_mark_complete']) && isset($_POST['post']) && $post->ID == $_POST['post'])
 	{	
 		return "";	
@@ -15,7 +16,6 @@ function learndash_mark_complete($post) {
 	else
 	{
 		$timeval = learndash_forced_lesson_time();
-
 		if(!empty($timeval)) {
 			$time_sections = explode(" ", $timeval);
 			$h = $m = $s = 0;
@@ -34,14 +34,36 @@ function learndash_mark_complete($post) {
 			if($time == 0)
 			$time = (int) $timeval;
 		}
-		if(empty($time))
-		return  "<form id='sfwd-mark-complete' method='post' action=''>
-				<input type='hidden' value='".$post->ID."' name='post'/>
-				<input type='submit' value='" . __('Mark Complete', 'learndash') . "' name='sfwd_mark_complete'/>
-			</form>
-			";
-		else
+		if(lesson_hasassignments($post))
 		{
+				$ret = "
+					<table>
+					<tr> <u>".__("Upload Assignment", "learndash")."</u></tr>
+					<tr>
+					<td>
+					<form name='uploadfile' id='uploadfile_form' method='POST' enctype='multipart/form-data' action='' accept-charset='utf-8' >
+					<input type='file' name='uploadfiles[]' id='uploadfiles' size='35' class='uploadfiles' />
+					<input type='hidden' value='".$post->ID."' name='post'/>
+					<input class='button-primary' type='submit' name='uploadfile' id='uploadfile_btn' value='".__("Upload", "learndash")."'  />
+					</form>
+					</td>
+					</tr>
+					</table>
+					";
+				return $ret;
+		}	
+		else
+		if(empty($time)){
+
+			return  "
+					<form id='sfwd-mark-complete' method='post' action=''>
+					<input type='hidden' value='".$post->ID."' name='post'/>
+					<input type='submit' value='" . __('Mark Complete', 'learndash') . "' name='sfwd_mark_complete'/>
+					</form>
+					";
+		}
+		else
+		{ //Forced Timer
 		$return = '<script>
 					var learndash_forced_lesson_time = '.$time.' ;
 					var learndash_timer_var = setInterval(function(){learndash_timer()},1000);
@@ -99,8 +121,14 @@ function learndash_mark_complete_process($post = null) {
 				return;
 			}
 			
-		}	
-		learndash_process_mark_complete(null, $_POST['post']);
+		}
+		if(isset($_POST['userid'])){
+			$userid = $_POST['userid'];
+		}
+		else{
+			$userid = null;
+		}
+		learndash_process_mark_complete($userid, $_POST['post']);
 		
 		$nextlessonredirect = learndash_get_next_lesson_redirect();
 		if(!empty($nextlessonredirect))
@@ -466,7 +494,6 @@ function learndash_course_progress($atts){
 
 function is_quiz_accessable($user_id = null, $post = null)
 {
-	
 	if(empty($user_id))
 	{
 		$current_user = wp_get_current_user();
@@ -483,20 +510,23 @@ function is_quiz_accessable($user_id = null, $post = null)
 	{
 		$course_progress = get_user_meta($user_id, '_sfwd-course_progress', true); 
 		$course_id = learndash_get_course_id($post->ID);
-	/*	$course_options = get_post_meta($course_id, "_sfwd-courses", true);
-		$course_disable_lesson_progression = !empty($course_options["sfwd-courses_course_disable_lesson_progression"]);
 		
-		if($course_disable_lesson_progression)
-		return 1;
-		*/
 		if(!empty($course_progress) && !empty($course_progress[$course_id]) && !empty($course_progress[$course_id]['total']))
 		{
 			$completed = intVal($course_progress[$course_id]['completed']);
 			$total = intVal($course_progress[$course_id]['total']);
 			if($completed >= $total -1)
 			return 1;
+			
 		}
-			return 0;	
+		
+		$lessons = learndash_get_lesson_list($course_id);
+		
+		if(empty($lessons)) {
+			return 1;
+		}
+	
+		return 0;	
 	}		
 }
 

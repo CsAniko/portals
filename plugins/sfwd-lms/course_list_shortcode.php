@@ -79,7 +79,7 @@ add_shortcode("ld_quiz_list", "ld_quiz_list");
 function ld_course_check_user_access($course_id, $user_id = null) {
 
 	$course_options = get_post_meta($course_id, "_sfwd-courses", true);
-	if(empty($course_options['sfwd-courses_course_price']))
+	if(empty($course_options['sfwd-courses_course_price']) && empty($course_options['sfwd-courses_course_join']))
 	return true;
 	
 	if(empty($user_id))
